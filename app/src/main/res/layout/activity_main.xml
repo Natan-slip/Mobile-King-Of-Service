@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/id_containerLogo"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@color/cardview_dark_background"
+        tools:ignore="MissingConstraints">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toBottomOf="@+id/id_containerLogo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tv_titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="Seja Bem Vindo"
+
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_containerLogo" />
+
+<!--    <Button-->
+<!--        android:id="@+id/btt_login"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        tools:layout_editor_absoluteX="16dp"-->
+<!--        tools:layout_editor_absoluteY="452dp">-->
+
+    <ImageView
+        android:id="@+id/iv_login"
+        android:layout_width="156dp"
+        android:layout_height="124dp"
+        android:src="@drawable/login"
+        tools:layout_editor_absoluteX="43dp"
+        tools:layout_editor_absoluteY="431dp">
+
+        <Button
+            android:id="@+id/btt_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+            </ImageView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
