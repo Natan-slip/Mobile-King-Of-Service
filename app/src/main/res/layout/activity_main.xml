@@ -27,39 +27,62 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
-        android:id="@+id/tv_titulo"
+        android:id="@+id/tv_bemvindo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:text="Seja Bem Vindo"
-
+        android:layout_marginTop="32dp"
+        android:text="Seja Bem-Vindo"
         android:textSize="32sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/id_containerLogo" />
 
-<!--    <Button-->
-<!--        android:id="@+id/btt_login"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        tools:layout_editor_absoluteX="16dp"-->
-<!--        tools:layout_editor_absoluteY="452dp">-->
-
     <ImageView
         android:id="@+id/iv_login"
-        android:layout_width="156dp"
-        android:layout_height="124dp"
+        android:layout_width="157dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="40dp"
         android:src="@drawable/login"
-        tools:layout_editor_absoluteX="43dp"
-        tools:layout_editor_absoluteY="431dp">
+        app:layout_constraintEnd_toStartOf="@+id/iv_cadastro"
+        app:layout_constraintHorizontal_bias="0.603"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_bemvindo" />
 
-        <Button
-            android:id="@+id/btt_login"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/bt_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/material_on_primary_disabled"
+        android:text="Fazer Login"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btt_cadastro"
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_login"
+        app:layout_constraintVertical_bias="0.146" />
 
+    <ImageView
+        android:id="@+id/iv_cadastro"
+        android:layout_width="157dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="40dp"
+        android:src="@drawable/cadastro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_bemvindo" />
 
-            </ImageView>
+    <Button
+        android:id="@+id/btt_cadastro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="@color/material_on_primary_disabled"
+        android:text="Fazer Cadastro"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_cadastro"
+        app:layout_constraintVertical_bias="0.146" />
 
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
