@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="409dp"
+    android:layout_height="729dp"
+    tools:layout_editor_absoluteX="dp"
+    tools:layout_editor_absoluteY="1dp"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".TelaCadastroCliente">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_profile"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:cardCornerRadius="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_profile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/profile"
+                android:scaleType="centerCrop"
+                android:contentDescription="TODO" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_trocar_foto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Trocar foto"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_view_profile" />
+
+        <TextView
+            android:id="@+id/tv_nomeCadastroCliente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nome"
+            app:layout_constraintBottom_toTopOf="@+id/et_nomeCadastroCliente"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.091"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_trocar_foto" />
+
+        <EditText
+            android:id="@+id/et_nomeCadastroCliente"
+            android:layout_width="341dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="60dp"
+            android:hint="nome"
+            app:layout_constraintEnd_toEndOf="@+id/tv_nomeCadastroCliente"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tv_nomeCadastroCliente"
+            app:layout_constraintTop_toBottomOf="@+id/tv_trocar_foto" />
+
+        <TextView
+            android:id="@+id/tv_dataNascimentoCadastroCliente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Data Nascimento"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.109"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_nomeCadastroCliente" />
+
+        <EditText
+            android:id="@+id/et_dataNascimentoCadastroCliente"
+            android:layout_width="341dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="56dp"
+            android:hint="Data Nascimento"
+            app:layout_constraintEnd_toEndOf="@+id/tv_dataNascimentoCadastroCliente"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tv_dataNascimentoCadastroCliente"
+            app:layout_constraintTop_toBottomOf="@+id/et_nomeCadastroCliente" />
+
+        <TextView
+            android:id="@+id/tv_emailCadastroCliente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="E-mail"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.091"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_dataNascimentoCadastroCliente" />
+
+        <EditText
+            android:id="@+id/et_emailCadastroCliente"
+            android:layout_width="341dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="52dp"
+            android:hint="email"
+            app:layout_constraintEnd_toEndOf="@+id/tv_emailCadastroCliente"
+            app:layout_constraintHorizontal_bias="0.003"
+            app:layout_constraintStart_toStartOf="@+id/tv_emailCadastroCliente"
+            app:layout_constraintTop_toBottomOf="@+id/et_dataNascimentoCadastroCliente" />
+
+        <TextView
+            android:id="@+id/tv_senhaCadastroCliente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Senha"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.091"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_emailCadastroCliente" />
+
+        <EditText
+            android:id="@+id/et_senhaCadastroCliente"
+            android:layout_width="341dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="52dp"
+            android:hint="senha"
+            app:layout_constraintEnd_toEndOf="@+id/tv_senhaCadastroCliente"
+            app:layout_constraintHorizontal_bias="0.003"
+            app:layout_constraintStart_toStartOf="@+id/tv_senhaCadastroCliente"
+            app:layout_constraintTop_toBottomOf="@+id/et_emailCadastroCliente" />
+
+        <TextView
+            android:id="@+id/tv_generoCadastroCliente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Genêro"
+            app:layout_constraintBottom_toTopOf="@+id/et_generoCadastroCliente"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.09"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_senhaCadastroCliente" />
+
+        <EditText
+            android:id="@+id/et_generoCadastroCliente"
+            android:layout_width="341dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="60dp"
+            android:hint="genero"
+            app:layout_constraintEnd_toEndOf="@+id/tv_generoCadastroCliente"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tv_generoCadastroCliente"
+            app:layout_constraintTop_toBottomOf="@+id/et_senhaCadastroCliente" />
+
+        <TextView
+            android:id="@+id/tv_cepCadastroCliente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="CEP"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.088"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_generoCadastroCliente" />
+
+        <EditText
+            android:id="@+id/et_cepCadastroCliente"
+            android:layout_width="341dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="64dp"
+            android:hint="CEP"
+            app:layout_constraintEnd_toEndOf="@+id/tv_cepCadastroCliente"
+            app:layout_constraintHorizontal_bias="0.003"
+            app:layout_constraintStart_toStartOf="@+id/tv_cepCadastroCliente"
+            app:layout_constraintTop_toBottomOf="@+id/et_generoCadastroCliente" />
+
+        <TextView
+            android:id="@+id/tv_estadoCadastroCliente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Estado"
+            app:layout_constraintBottom_toTopOf="@+id/et_estadoCadastroCliente"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.09"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_cepCadastroCliente"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <EditText
+            android:id="@+id/et_estadoCadastroCliente"
+            android:layout_width="341dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="56dp"
+            android:hint="Estado"
+            app:layout_constraintEnd_toEndOf="@+id/tv_estadoCadastroCliente"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tv_estadoCadastroCliente"
+            app:layout_constraintTop_toBottomOf="@+id/et_cepCadastroCliente" />
+
+        <TextView
+            android:id="@+id/tv_cidadeCadastroCliente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Cidade"
+            app:layout_constraintBottom_toTopOf="@+id/et_cidadeCadastroCliente"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.09"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_estadoCadastroCliente"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <EditText
+            android:id="@+id/et_cidadeCadastroCliente"
+            android:layout_width="341dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="56dp"
+            android:hint="Cidade"
+            app:layout_constraintEnd_toEndOf="@+id/tv_cidadeCadastroCliente"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tv_cidadeCadastroCliente"
+            app:layout_constraintTop_toBottomOf="@+id/et_estadoCadastroCliente" />
+
+        <TextView
+            android:id="@+id/tv_bairroCadastroCliente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Bairro"
+            app:layout_constraintBottom_toTopOf="@+id/et_bairroCadastroCliente"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.09"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_cidadeCadastroCliente"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <EditText
+            android:id="@+id/et_bairroCadastroCliente"
+            android:layout_width="341dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="56dp"
+            android:hint="Bairro"
+            app:layout_constraintEnd_toEndOf="@+id/tv_bairroCadastroCliente"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tv_bairroCadastroCliente"
+            app:layout_constraintTop_toBottomOf="@+id/et_cidadeCadastroCliente" />
+
+        <TextView
+            android:id="@+id/tv_ruaCadastroCliente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Rua"
+            app:layout_constraintBottom_toTopOf="@+id/et_ruaCadastroCliente"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.09"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_bairroCadastroCliente"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <EditText
+            android:id="@+id/et_ruaCadastroCliente"
+            android:layout_width="341dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="48dp"
+            android:hint="Rua"
+            app:layout_constraintEnd_toEndOf="@+id/tv_ruaCadastroCliente"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tv_ruaCadastroCliente"
+            app:layout_constraintTop_toBottomOf="@+id/et_bairroCadastroCliente" />
+
+        <TextView
+            android:id="@+id/tv_numeroCadastroCliente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Numero"
+            app:layout_constraintBottom_toTopOf="@+id/et_numeroCadastroCliente"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.09"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_ruaCadastroCliente"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <EditText
+            android:id="@+id/et_numeroCadastroCliente"
+            android:layout_width="341dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="56dp"
+            android:hint="Numero"
+            app:layout_constraintEnd_toEndOf="@+id/tv_numeroCadastroCliente"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tv_numeroCadastroCliente"
+            app:layout_constraintTop_toBottomOf="@+id/et_ruaCadastroCliente" />
+
+        <TextView
+            android:id="@+id/tv_complementoCadastroCliente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Complemento"
+            app:layout_constraintBottom_toTopOf="@+id/et_complementoCadastroCliente"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.09"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_numeroCadastroCliente"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <EditText
+            android:id="@+id/et_complementoCadastroCliente"
+            android:layout_width="341dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="56dp"
+            android:hint="Complemento"
+            app:layout_constraintEnd_toEndOf="@+id/tv_complementoCadastroCliente"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tv_complementoCadastroCliente"
+            app:layout_constraintTop_toBottomOf="@+id/et_numeroCadastroCliente" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

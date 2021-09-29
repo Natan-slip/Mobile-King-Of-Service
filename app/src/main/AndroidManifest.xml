@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.KingOfService">
-        <activity android:name=".TelaTipoUsuario"></activity>
+        <activity android:name=".TelaCadastroCliente"></activity>
+        <activity android:name=".TelaTipoUsuario" />
         <activity android:name=".TelaLogin" />
         <activity android:name=".MainActivity">
             <intent-filter>

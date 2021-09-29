@@ -50,7 +50,7 @@
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/tv_email"
+        android:id="@+id/tv_emailLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -69,13 +69,14 @@
         android:layout_marginTop="8dp"
         android:drawablePadding="16dp"
         android:hint="E-mail"
+        android:drawableStart="@drawable/email_24"
         android:textColorHint="@color/colorPrimary"
         android:inputType="textEmailAddress"
         android:padding="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.407"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_email" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_emailLogin" />
 
     <TextView
         android:id="@+id/tv_senha"
@@ -97,6 +98,7 @@
         android:layout_marginTop="8dp"
         android:drawablePadding="16dp"
         android:hint="Senha"
+        android:drawableStart="@drawable/lock_24"
         android:inputType="textEmailAddress"
         android:padding="16dp"
         android:textColorHint="@color/colorPrimary"
