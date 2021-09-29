@@ -9,14 +9,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        bt_login.setOnClickListener {
-            IrParaTelaLogin()
-        }
-    }
+//        btt_login.setOnClickListener {
+//            IrParaTelaLogin()
+//        }
+//    }
 
-    private fun IrParaTelaLogin(){
-
-        val telaLogin = Intent(this,TelaLogin::class.java)
-        startActivity(telaLogin)
+//    private fun IrParaTelaLogin(){
+//
+//        val telaLogin = Intent(this,TelaLogin::class.java)
+//        startActivity(telaLogin)
     }
 }

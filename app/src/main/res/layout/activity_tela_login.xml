@@ -22,8 +22,7 @@
             app:layout_constraintBottom_toBottomOf="@+id/id_containerLogo"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:layout_editor_absoluteX="43dp" />
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -157,6 +156,5 @@
         tools:layout_editor_absoluteX="185dp"
         tools:layout_editor_absoluteY="623dp"
         tools:ignore="MissingConstraints" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
