@@ -69,7 +69,6 @@
         android:layout_marginTop="8dp"
         android:drawablePadding="16dp"
         android:hint="E-mail"
-        android:drawableStart="@drawable/email_24"
         android:textColorHint="@color/colorPrimary"
         android:inputType="textEmailAddress"
         android:padding="16dp"

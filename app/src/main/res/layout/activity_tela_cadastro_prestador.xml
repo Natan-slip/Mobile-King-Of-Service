@@ -45,33 +45,33 @@
             app:layout_constraintTop_toBottomOf="@+id/card_view_profile" />
 
         <TextView
-            android:id="@+id/tv_nomeCadastroCliente"
+            android:id="@+id/tv_nomeCadastroPrestador"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Nome"
             android:textStyle="bold"
             android:fontFamily="@font/roboto"
-            app:layout_constraintBottom_toTopOf="@+id/et_nomeCadastroCliente"
+            app:layout_constraintBottom_toTopOf="@+id/et_nomeCadastroPrestador"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.091"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_trocar_foto" />
 
         <EditText
-            android:id="@+id/et_nomeCadastroCliente"
+            android:id="@+id/et_nomeCadastroPrestador"
             android:layout_width="341dp"
             android:layout_height="46dp"
             android:layout_marginTop="60dp"
             android:drawableStart="@drawable/name_24"
             android:paddingLeft="10dp"
             android:background="@drawable/edit_text_login_background"
-            app:layout_constraintEnd_toEndOf="@+id/tv_nomeCadastroCliente"
+            app:layout_constraintEnd_toEndOf="@+id/tv_nomeCadastroPrestador"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/tv_nomeCadastroCliente"
+            app:layout_constraintStart_toStartOf="@+id/tv_nomeCadastroPrestador"
             app:layout_constraintTop_toBottomOf="@+id/tv_trocar_foto" />
 
         <TextView
-            android:id="@+id/tv_dataNascimentoCadastroCliente"
+            android:id="@+id/tv_dataNascimentoCadastroPrestador"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
@@ -81,23 +81,23 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.109"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/et_nomeCadastroCliente" />
+            app:layout_constraintTop_toBottomOf="@+id/et_nomeCadastroPrestador" />
 
         <EditText
-            android:id="@+id/et_dataNascimentoCadastroCliente"
+            android:id="@+id/et_dataNascimentoCadastroPrestador"
             android:layout_width="341dp"
             android:layout_height="46dp"
             android:layout_marginTop="56dp"
             android:paddingLeft="10dp"
             android:drawableStart="@drawable/calendario_24"
             android:background="@drawable/edit_text_login_background"
-            app:layout_constraintEnd_toEndOf="@+id/tv_dataNascimentoCadastroCliente"
+            app:layout_constraintEnd_toEndOf="@+id/tv_dataNascimentoCadastroPrestador"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/tv_dataNascimentoCadastroCliente"
-            app:layout_constraintTop_toBottomOf="@+id/et_nomeCadastroCliente" />
+            app:layout_constraintStart_toStartOf="@+id/tv_dataNascimentoCadastroPrestador"
+            app:layout_constraintTop_toBottomOf="@+id/et_nomeCadastroPrestador" />
 
         <TextView
-            android:id="@+id/tv_emailCadastroCliente"
+            android:id="@+id/tv_emailCadastroPrestador"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
@@ -107,10 +107,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.091"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/et_dataNascimentoCadastroCliente" />
+            app:layout_constraintTop_toBottomOf="@+id/et_dataNascimentoCadastroPrestador" />
 
         <EditText
-            android:id="@+id/et_emailCadastroCliente"
+            android:id="@+id/et_emailCadastroPrestador"
             android:layout_width="341dp"
             android:layout_height="46dp"
             android:layout_marginTop="52dp"
@@ -119,11 +119,11 @@
             android:background="@drawable/edit_text_login_background"
             app:layout_constraintEnd_toEndOf="@+id/tv_emailCadastroPrestador"
             app:layout_constraintHorizontal_bias="0.003"
-            app:layout_constraintStart_toStartOf="@+id/tv_emailCadastroCliente"
-            app:layout_constraintTop_toBottomOf="@+id/et_dataNascimentoCadastroCliente" />
+            app:layout_constraintStart_toStartOf="@+id/tv_emailCadastroPrestador"
+            app:layout_constraintTop_toBottomOf="@+id/et_dataNascimentoCadastroPrestador" />
 
         <TextView
-            android:id="@+id/tv_senhaCadastroCliente"
+            android:id="@+id/tv_senhaCadastroPrestador"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
@@ -133,23 +133,23 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.091"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/et_emailCadastroCliente" />
+            app:layout_constraintTop_toBottomOf="@+id/et_emailCadastroPrestador" />
 
         <EditText
-            android:id="@+id/et_senhaCadastroCliente"
+            android:id="@+id/et_senhaCadastroPrestador"
             android:layout_width="341dp"
             android:layout_height="46dp"
             android:layout_marginTop="52dp"
             android:paddingLeft="10dp"
             android:drawableStart="@drawable/lock_24"
             android:background="@drawable/edit_text_login_background"
-            app:layout_constraintEnd_toEndOf="@+id/tv_senhaCadastroCliente"
+            app:layout_constraintEnd_toEndOf="@+id/tv_senhaCadastroPrestador"
             app:layout_constraintHorizontal_bias="0.003"
-            app:layout_constraintStart_toStartOf="@+id/tv_senhaCadastroCliente"
-            app:layout_constraintTop_toBottomOf="@+id/et_emailCadastroCliente" />
+            app:layout_constraintStart_toStartOf="@+id/tv_senhaCadastroPrestador"
+            app:layout_constraintTop_toBottomOf="@+id/et_emailCadastroPrestador" />
 
         <TextView
-            android:id="@+id/tv_generoCadastroCliente"
+            android:id="@+id/tv_generoCadastroPrestador"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
@@ -159,10 +159,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.09"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/et_senhaCadastroCliente" />
+            app:layout_constraintTop_toBottomOf="@+id/et_senhaCadastroPrestador" />
 
         <TextView
-            android:id="@+id/tv_cepCadastroCliente"
+            android:id="@+id/tv_cepCadastroPrestador"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
@@ -172,201 +172,201 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.088"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/radioGroup_cadastroCliente"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup_cadastroPrestador"
             tools:ignore="MissingConstraints" />
 
         <EditText
-            android:id="@+id/et_cepCadastroCliente"
+            android:id="@+id/et_cepCadastroPrestador"
             android:layout_width="341dp"
             android:layout_height="46dp"
             android:layout_marginTop="52dp"
             android:background="@drawable/edit_text_login_background"
             android:drawableStart="@drawable/localizacao_24"
             android:paddingLeft="10dp"
-            app:layout_constraintEnd_toEndOf="@+id/tv_cepCadastroCliente"
+            app:layout_constraintEnd_toEndOf="@+id/tv_cepCadastroPrestador"
             app:layout_constraintHorizontal_bias="0.003"
-            app:layout_constraintStart_toStartOf="@+id/tv_cepCadastroCliente"
-            app:layout_constraintTop_toBottomOf="@+id/radioGroup_cadastroCliente"
+            app:layout_constraintStart_toStartOf="@+id/tv_cepCadastroPrestador"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup_cadastroPrestador"
             tools:ignore="MissingConstraints" />
 
         <TextView
-            android:id="@+id/tv_estadoCadastroCliente"
+            android:id="@+id/tv_estadoCadastroPrestador"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:fontFamily="@font/roboto"
             android:text="Estado"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/et_estadoCadastroCliente"
+            app:layout_constraintBottom_toTopOf="@+id/et_estadoCadastroPrestador"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.09"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/et_cepCadastroCliente"
+            app:layout_constraintTop_toBottomOf="@+id/et_cepCadastroPrestador"
             app:layout_constraintVertical_bias="0.0" />
 
         <EditText
-            android:id="@+id/et_estadoCadastroCliente"
+            android:id="@+id/et_estadoCadastroPrestador"
             android:layout_width="341dp"
             android:layout_height="46dp"
             android:layout_marginTop="56dp"
             android:paddingLeft="10dp"
             android:drawableStart="@drawable/localizacao_24"
             android:background="@drawable/edit_text_login_background"
-            app:layout_constraintEnd_toEndOf="@+id/tv_estadoCadastroCliente"
+            app:layout_constraintEnd_toEndOf="@+id/tv_estadoCadastroPrestador"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/tv_estadoCadastroCliente"
-            app:layout_constraintTop_toBottomOf="@+id/et_cepCadastroCliente" />
+            app:layout_constraintStart_toStartOf="@+id/tv_estadoCadastroPrestador"
+            app:layout_constraintTop_toBottomOf="@+id/et_cepCadastroPrestador" />
 
         <TextView
-            android:id="@+id/tv_cidadeCadastroCliente"
+            android:id="@+id/tv_cidadeCadastroPrestador"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:fontFamily="@font/roboto"
             android:text="Cidade"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/et_cidadeCadastroCliente"
+            app:layout_constraintBottom_toTopOf="@+id/et_cidadeCadastroPrestador"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.09"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/et_estadoCadastroCliente"
+            app:layout_constraintTop_toBottomOf="@+id/et_estadoCadastroPrestador"
             app:layout_constraintVertical_bias="0.0" />
 
         <EditText
-            android:id="@+id/et_cidadeCadastroCliente"
+            android:id="@+id/et_cidadeCadastroPrestador"
             android:layout_width="341dp"
             android:layout_height="46dp"
             android:layout_marginTop="56dp"
             android:paddingLeft="10dp"
             android:drawableStart="@drawable/localizacao_24"
             android:background="@drawable/edit_text_login_background"
-            app:layout_constraintEnd_toEndOf="@+id/tv_cidadeCadastroCliente"
+            app:layout_constraintEnd_toEndOf="@+id/tv_cidadeCadastroPrestador"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/tv_cidadeCadastroCliente"
-            app:layout_constraintTop_toBottomOf="@+id/et_estadoCadastroCliente" />
+            app:layout_constraintStart_toStartOf="@+id/tv_cidadeCadastroPrestador"
+            app:layout_constraintTop_toBottomOf="@+id/et_estadoCadastroPrestador" />
 
         <TextView
-            android:id="@+id/tv_bairroCadastroCliente"
+            android:id="@+id/tv_bairroCadastroPrestador"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:fontFamily="@font/roboto"
             android:text="Bairro"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/et_bairroCadastroCliente"
+            app:layout_constraintBottom_toTopOf="@+id/et_bairroCadastroPrestador"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.09"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/et_cidadeCadastroCliente"
+            app:layout_constraintTop_toBottomOf="@+id/et_cidadeCadastroPrestador"
             app:layout_constraintVertical_bias="0.0" />
 
         <EditText
-            android:id="@+id/et_bairroCadastroCliente"
+            android:id="@+id/et_bairroCadastroPrestador"
             android:layout_width="341dp"
             android:layout_height="46dp"
             android:layout_marginTop="56dp"
             android:paddingLeft="10dp"
             android:drawableStart="@drawable/localizacao_24"
             android:background="@drawable/edit_text_login_background"
-            app:layout_constraintEnd_toEndOf="@+id/tv_bairroCadastroCliente"
+            app:layout_constraintEnd_toEndOf="@+id/tv_bairroCadastroPrestador"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/tv_bairroCadastroCliente"
-            app:layout_constraintTop_toBottomOf="@+id/et_cidadeCadastroCliente" />
+            app:layout_constraintStart_toStartOf="@+id/tv_bairroCadastroPrestador"
+            app:layout_constraintTop_toBottomOf="@+id/et_cidadeCadastroPrestador" />
 
         <TextView
-            android:id="@+id/tv_ruaCadastroCliente"
+            android:id="@+id/tv_ruaCadastroPrestador"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:fontFamily="@font/roboto"
             android:text="Rua"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/et_ruaCadastroCliente"
+            app:layout_constraintBottom_toTopOf="@+id/et_ruaCadastroPrestador"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.09"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/et_bairroCadastroCliente"
+            app:layout_constraintTop_toBottomOf="@+id/et_bairroCadastroPrestador"
             app:layout_constraintVertical_bias="0.0" />
 
         <EditText
-            android:id="@+id/et_ruaCadastroCliente"
+            android:id="@+id/et_ruaCadastroPrestador"
             android:layout_width="341dp"
             android:layout_height="46dp"
             android:layout_marginTop="48dp"
             android:paddingLeft="10dp"
             android:drawableStart="@drawable/localizacao_24"
             android:background="@drawable/edit_text_login_background"
-            app:layout_constraintEnd_toEndOf="@+id/tv_ruaCadastroCliente"
+            app:layout_constraintEnd_toEndOf="@+id/tv_ruaCadastroPrestador"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/tv_ruaCadastroCliente"
-            app:layout_constraintTop_toBottomOf="@+id/et_bairroCadastroCliente" />
+            app:layout_constraintStart_toStartOf="@+id/tv_ruaCadastroPrestador"
+            app:layout_constraintTop_toBottomOf="@+id/et_bairroCadastroPrestador" />
 
         <TextView
-            android:id="@+id/tv_numeroCadastroCliente"
+            android:id="@+id/tv_numeroCadastroPrestador"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:fontFamily="@font/roboto"
             android:text="Numero"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/et_numeroCadastroCliente"
+            app:layout_constraintBottom_toTopOf="@+id/et_numeroCadastroPrestador"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.09"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/et_ruaCadastroCliente"
+            app:layout_constraintTop_toBottomOf="@+id/et_ruaCadastroPrestador"
             app:layout_constraintVertical_bias="0.0" />
 
         <EditText
-            android:id="@+id/et_numeroCadastroCliente"
+            android:id="@+id/et_numeroCadastroPrestador"
             android:layout_width="341dp"
             android:layout_height="46dp"
             android:layout_marginTop="56dp"
             android:paddingLeft="10dp"
             android:drawableStart="@drawable/localizacao_24"
             android:background="@drawable/edit_text_login_background"
-            app:layout_constraintEnd_toEndOf="@+id/tv_numeroCadastroCliente"
+            app:layout_constraintEnd_toEndOf="@+id/tv_numeroCadastroPrestador"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/tv_numeroCadastroCliente"
-            app:layout_constraintTop_toBottomOf="@+id/et_ruaCadastroCliente" />
+            app:layout_constraintStart_toStartOf="@+id/tv_numeroCadastroPrestador"
+            app:layout_constraintTop_toBottomOf="@+id/et_ruaCadastroPrestador" />
 
         <TextView
-            android:id="@+id/tv_complementoCadastroCliente"
+            android:id="@+id/tv_complementoCadastroPrestador"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:fontFamily="@font/roboto"
             android:text="Complemento"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/et_complementoCadastroCliente"
+            app:layout_constraintBottom_toTopOf="@+id/et_complementoCadastroPrestador"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.09"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/et_numeroCadastroCliente"
+            app:layout_constraintTop_toBottomOf="@+id/et_numeroCadastroPrestador"
             app:layout_constraintVertical_bias="0.0" />
 
         <EditText
-            android:id="@+id/et_complementoCadastroCliente"
+            android:id="@+id/et_complementoCadastroPrestador"
             android:layout_width="341dp"
             android:layout_height="46dp"
             android:layout_marginTop="56dp"
             android:drawableStart="@drawable/localizacao_24"
             android:background="@drawable/edit_text_login_background"
             android:paddingLeft="10dp"
-            app:layout_constraintEnd_toEndOf="@+id/tv_complementoCadastroCliente"
+            app:layout_constraintEnd_toEndOf="@+id/tv_complementoCadastroPrestador"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/tv_complementoCadastroCliente"
-            app:layout_constraintTop_toBottomOf="@+id/et_numeroCadastroCliente" />
+            app:layout_constraintStart_toStartOf="@+id/tv_complementoCadastroPrestador"
+            app:layout_constraintTop_toBottomOf="@+id/et_numeroCadastroPrestador" />
 
         <RadioGroup
-            android:id="@+id/radioGroup_cadastroCliente"
+            android:id="@+id/radioGroup_cadastroPrestador"
             android:layout_width="333dp"
             android:layout_height="47dp"
             android:layout_marginTop="52dp"
             android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="@+id/tv_generoCadastroCliente"
+            app:layout_constraintEnd_toEndOf="@+id/tv_generoCadastroPrestador"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/tv_generoCadastroCliente"
-            app:layout_constraintTop_toBottomOf="@+id/et_senhaCadastroCliente">
+            app:layout_constraintStart_toStartOf="@+id/tv_generoCadastroPrestador"
+            app:layout_constraintTop_toBottomOf="@+id/et_senhaCadastroPrestador">
 
             <RadioButton
                 android:id="@+id/radio_masculino"

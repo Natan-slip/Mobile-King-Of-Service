@@ -3,7 +3,6 @@ package br.com.kingofservice
 import android.app.DatePickerDialog
 import android.content.Intent
 import android.graphics.Bitmap
-import android.graphics.BitmapFactory
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -37,26 +36,26 @@ class TelaCadastroCliente : AppCompatActivity() {
         val mes = calendario.get(Calendar.MONTH) //Pagamos o mês desse calendar
         val dia = calendario.get(Calendar.DAY_OF_MONTH) //Pegamos o dia do mês
 
-        //Abrir o componente DatePicker
-        et_data_nascimento.setOnClickListener {
-            val dpd = DatePickerDialog(
-                this,
-                DatePickerDialog.OnDateSetListener { view, _ano, _mes, _dia ->
-                    var diaZero = _dia.toString()
-                    var mesZero = _mes.toString()
-                    if (_dia < 10) {
-                        diaZero = "0$_dia"
-                    }
-
-                    if (_mes < 9) {
-                        mesZero = "0${_mes + 1}"
-                    }
-                    et_data_nascimento.setText("$diaZero/$mesZero/$_ano")
-                }, ano, mes, dia
-            )
-            dpd.show()
-        }
-
+//        //Abrir o componente DatePicker
+//        et_data_nascimento.setOnClickListener {
+//            val dpd = DatePickerDialog(
+//                this,
+//                DatePickerDialog.OnDateSetListener { view, _ano, _mes, _dia ->
+//                    var diaZero = _dia.toString()
+//                    var mesZero = _mes.toString()
+//                    if (_dia < 10) {
+//                        diaZero = "0$_dia"
+//                    }
+//
+//                    if (_mes < 9) {
+//                        mesZero = "0${_mes + 1}"
+//                    }
+//                    et_data_nascimento.setText("$diaZero/$mesZero/$_ano")
+//                }, ano, mes, dia
+//            )
+//            dpd.show()
+//        }
+//
 //        bt_gravar.setOnClickListener {
 //            // *** Criar o sharedPreferences
 ////            val dados = getSharedPreferences("dados_usuario", Context.MODE_PRIVATE)
@@ -75,7 +74,7 @@ class TelaCadastroCliente : AppCompatActivity() {
 //        }
 //
 //    }
-
+//
 //        override fun onCreateOptionsMenu(menu: Menu?): Boolean {
 ////        return super.onCreateOptionsMenu(menu)
 //
@@ -167,6 +166,5 @@ class TelaCadastroCliente : AppCompatActivity() {
 //                iv_profile.setImageBitmap(imageBitMap)
 //
 //            }
-        }
     }
 }
