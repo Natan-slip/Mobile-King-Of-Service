@@ -11,15 +11,15 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         btt_login.setOnClickListener {
-            TelaLogin()
+            IrParaTelaLogin()
         }
 
         btt_cadastro.setOnClickListener {
-            TelaTipoUsuario()
+            IrParaTelaTipoUsuario()
         }
     }
 
-    private fun TelaLogin(){
+    private fun IrParaTelaLogin(){
 
         val telaLogin = Intent(this,TelaLogin::class.java)
         startActivity(telaLogin)
@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
 // Funcionalidade de quando clicar em Cadastre-se ir para os tipos de categorias
 
 
-    private fun TelaTipoUsuario(){
+    private fun IrParaTelaTipoUsuario(){
 
         val telaTipoUsuario = Intent(this,TelaTipoUsuario::class.java)
         startActivity(telaTipoUsuario)

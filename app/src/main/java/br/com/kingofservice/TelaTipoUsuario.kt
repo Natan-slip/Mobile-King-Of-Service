@@ -19,15 +19,15 @@ class TelaTipoUsuario : AppCompatActivity() {
         }
     }
 
+    private fun TelaCadastroCliente(){
+
+        val telaCliente = Intent(this,TelaCadastroCliente::class.java)
+        startActivity(telaCliente)
+    }
+
     private fun TelaCadastroPrestador(){
 
         val telaCadastroPrestador = Intent(this,TelaCadastroPrestador::class.java)
         startActivity(telaCadastroPrestador)
-    }
-
-    private fun TelaCadastroCliente(){
-
-        val telaCadastroCliente = Intent(this,TelaCadastroCliente::class.java)
-        startActivity(telaCadastroCliente)
     }
 }

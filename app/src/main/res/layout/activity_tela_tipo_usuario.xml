@@ -58,7 +58,6 @@
         android:layout_height="102dp"
         android:layout_marginTop="40dp"
         android:src="@drawable/clientes"
-        app:layout_constraintCircleRadius="25dp"
         app:layout_constraintEnd_toStartOf="@+id/iv_prestador"
         app:layout_constraintHorizontal_bias="0.369"
         app:layout_constraintStart_toStartOf="parent"

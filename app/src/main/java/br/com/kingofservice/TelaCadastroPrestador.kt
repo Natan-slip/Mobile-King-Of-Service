@@ -3,9 +3,6 @@ package br.com.kingofservice
 import android.app.DatePickerDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuItem
-import kotlinx.android.synthetic.main.activity_tela_cadastro_cliente.*
 import kotlinx.android.synthetic.main.activity_tela_cadastro_prestador.*
 import java.util.*
 

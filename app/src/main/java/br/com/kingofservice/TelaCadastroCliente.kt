@@ -10,6 +10,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_tela_cadastro_cliente.*
+import kotlinx.android.synthetic.main.activity_tela_cadastro_prestador.*
 import kotlinx.android.synthetic.main.activity_tela_login.*
 import java.util.*
 
@@ -17,10 +18,10 @@ const val CODE_IMAGE = 100
 
 class TelaCadastroCliente : AppCompatActivity() {
 
-    var imageBitmap: Bitmap? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tela_cadastro_cliente)
+
 
         //Criar um calendário:
         val calendario = Calendar.getInstance() //Instancioams o Calendar da classe Java.util
