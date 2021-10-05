@@ -10,9 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KingOfService">
         <activity android:name=".TelaCadastroPrestador"></activity>
-        <activity android:name=".TelaCadastroCliente" />
+        <activity android:name=".TelaCadastroCliente"
+            android:parentActivityName=".TelaTipoUsuario"/>
         <activity android:name=".TelaTipoUsuario" />
-        <activity android:name=".TelaLogin" />
+        <activity android:name=".TelaLogin"
+            android:parentActivityName=".MainActivity"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
