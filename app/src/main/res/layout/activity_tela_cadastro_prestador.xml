@@ -18,9 +18,9 @@
             android:id="@+id/card_view_profile"
             android:layout_width="100dp"
             android:layout_height="100dp"
+            android:layout_marginTop="15dp"
             app:cardCornerRadius="45dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.45"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -42,7 +42,6 @@
             android:text="Trocar foto"
             android:textColor="@color/colorPrimary"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.46"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/card_view_profile" />
 
@@ -50,23 +49,24 @@
             android:id="@+id/tv_nomeCadastroPrestador"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
             android:text="Nome"
             android:textStyle="bold"
-            android:fontFamily="@font/roboto"
             app:layout_constraintBottom_toTopOf="@+id/et_nomeCadastroPrestador"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.091"
+            app:layout_constraintHorizontal_bias="0.142"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_trocar_foto" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_trocar_foto"
+            app:layout_constraintVertical_bias="0.4" />
 
         <EditText
             android:id="@+id/et_nomeCadastroPrestador"
             android:layout_width="300dp"
             android:layout_height="44dp"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="64dp"
+            android:background="@drawable/edit_text_login_background"
             android:drawableStart="@drawable/name_24"
             android:paddingLeft="10dp"
-            android:background="@drawable/edit_text_login_background"
             app:layout_constraintEnd_toEndOf="@+id/tv_nomeCadastroPrestador"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/tv_nomeCadastroPrestador"
@@ -76,14 +76,67 @@
             android:id="@+id/tv_dataNascimentoCadastroPrestador"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="16dp"
             android:fontFamily="@font/roboto"
             android:text="Data Nascimento"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.109"
+            app:layout_constraintHorizontal_bias="0.176"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/et_nomeCadastroPrestador" />
+
+        <TextView
+            android:id="@+id/tv_emailCadastroPrestador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/roboto"
+            android:text="E-mail"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.145"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_dataNascimentoCadastroPrestador" />
+
+        <TextView
+            android:id="@+id/tv_senhaCadastroPrestador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/roboto"
+            android:text="Senha"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.145"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_emailCadastroPrestador" />
+
+        <TextView
+            android:id="@+id/tv_generoCadastroPrestador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/roboto"
+            android:text="Genêro"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.145"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_senhaCadastroPrestador" />
+
+        <TextView
+            android:id="@+id/tv_cepCadastroPrestador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/roboto"
+            android:text="CEP"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.14"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup_cadastroPrestador"
+            tools:ignore="MissingConstraints" />
 
         <EditText
             android:id="@+id/et_dataNascimentoCadastroPrestador"
@@ -97,19 +150,6 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/tv_dataNascimentoCadastroPrestador"
             app:layout_constraintTop_toBottomOf="@+id/et_nomeCadastroPrestador" />
-
-        <TextView
-            android:id="@+id/tv_emailCadastroPrestador"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:fontFamily="@font/roboto"
-            android:text="E-mail"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.091"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/et_dataNascimentoCadastroPrestador" />
 
         <EditText
             android:id="@+id/et_emailCadastroPrestador"
@@ -125,19 +165,6 @@
             app:layout_constraintStart_toStartOf="@+id/tv_emailCadastroPrestador"
             app:layout_constraintTop_toBottomOf="@+id/et_dataNascimentoCadastroPrestador" />
 
-        <TextView
-            android:id="@+id/tv_senhaCadastroPrestador"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:fontFamily="@font/roboto"
-            android:text="Senha"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.091"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/et_emailCadastroPrestador" />
-
         <EditText
             android:id="@+id/et_senhaCadastroPrestador"
             android:layout_width="300dp"
@@ -151,33 +178,6 @@
             app:layout_constraintHorizontal_bias="0.003"
             app:layout_constraintStart_toStartOf="@+id/tv_senhaCadastroPrestador"
             app:layout_constraintTop_toBottomOf="@+id/et_emailCadastroPrestador" />
-
-        <TextView
-            android:id="@+id/tv_generoCadastroPrestador"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:fontFamily="@font/roboto"
-            android:text="Genêro"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.09"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/et_senhaCadastroPrestador" />
-
-        <TextView
-            android:id="@+id/tv_cepCadastroPrestador"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:fontFamily="@font/roboto"
-            android:text="CEP"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.088"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/radioGroup_cadastroPrestador"
-            tools:ignore="MissingConstraints" />
 
         <EditText
             android:id="@+id/et_cepCadastroPrestador"
@@ -203,9 +203,99 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/et_estadoCadastroPrestador"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.09"
+            app:layout_constraintHorizontal_bias="0.144"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/et_cepCadastroPrestador"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/tv_cidadeCadastroPrestador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/roboto"
+            android:text="Cidade"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/et_cidadeCadastroPrestador"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.145"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_estadoCadastroPrestador"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/tv_bairroCadastroPrestador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/roboto"
+            android:text="Bairro"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/et_bairroCadastroPrestador"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.145"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_cidadeCadastroPrestador"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/tv_ruaCadastroPrestador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/roboto"
+            android:text="Rua"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/et_ruaCadastroPrestador"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.142"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_bairroCadastroPrestador"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/tv_numeroCadastroPrestador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/roboto"
+            android:text="Numero"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/et_numeroCadastroPrestador"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.144"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_ruaCadastroPrestador"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/tv_complementoCadastroPrestador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/roboto"
+            android:text="Complemento"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/et_complementoCadastroPrestador"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.152"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_numeroCadastroPrestador"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/tv_profissaoCadastroPrestador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/roboto"
+            android:text="Profissão"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/et_profissaoCadastroPrestador"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.148"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_complementoCadastroPrestador"
             app:layout_constraintVertical_bias="0.0" />
 
         <EditText
@@ -221,21 +311,6 @@
             app:layout_constraintStart_toStartOf="@+id/tv_estadoCadastroPrestador"
             app:layout_constraintTop_toBottomOf="@+id/et_cepCadastroPrestador" />
 
-        <TextView
-            android:id="@+id/tv_cidadeCadastroPrestador"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:fontFamily="@font/roboto"
-            android:text="Cidade"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/et_cidadeCadastroPrestador"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.09"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/et_estadoCadastroPrestador"
-            app:layout_constraintVertical_bias="0.0" />
-
         <EditText
             android:id="@+id/et_cidadeCadastroPrestador"
             android:layout_width="300dp"
@@ -248,21 +323,6 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/tv_cidadeCadastroPrestador"
             app:layout_constraintTop_toBottomOf="@+id/et_estadoCadastroPrestador" />
-
-        <TextView
-            android:id="@+id/tv_bairroCadastroPrestador"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:fontFamily="@font/roboto"
-            android:text="Bairro"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/et_bairroCadastroPrestador"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.09"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/et_cidadeCadastroPrestador"
-            app:layout_constraintVertical_bias="0.0" />
 
         <EditText
             android:id="@+id/et_bairroCadastroPrestador"
@@ -277,21 +337,6 @@
             app:layout_constraintStart_toStartOf="@+id/tv_bairroCadastroPrestador"
             app:layout_constraintTop_toBottomOf="@+id/et_cidadeCadastroPrestador" />
 
-        <TextView
-            android:id="@+id/tv_ruaCadastroPrestador"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:fontFamily="@font/roboto"
-            android:text="Rua"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/et_ruaCadastroPrestador"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.09"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/et_bairroCadastroPrestador"
-            app:layout_constraintVertical_bias="0.0" />
-
         <EditText
             android:id="@+id/et_ruaCadastroPrestador"
             android:layout_width="300dp"
@@ -304,21 +349,6 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/tv_ruaCadastroPrestador"
             app:layout_constraintTop_toBottomOf="@+id/et_bairroCadastroPrestador" />
-
-        <TextView
-            android:id="@+id/tv_numeroCadastroPrestador"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:fontFamily="@font/roboto"
-            android:text="Numero"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/et_numeroCadastroPrestador"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.09"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/et_ruaCadastroPrestador"
-            app:layout_constraintVertical_bias="0.0" />
 
         <EditText
             android:id="@+id/et_numeroCadastroPrestador"
@@ -333,21 +363,6 @@
             app:layout_constraintStart_toStartOf="@+id/tv_numeroCadastroPrestador"
             app:layout_constraintTop_toBottomOf="@+id/et_ruaCadastroPrestador" />
 
-        <TextView
-            android:id="@+id/tv_complementoCadastroPrestador"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:fontFamily="@font/roboto"
-            android:text="Complemento"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/et_complementoCadastroPrestador"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.09"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/et_numeroCadastroPrestador"
-            app:layout_constraintVertical_bias="0.0" />
-
         <EditText
             android:id="@+id/et_complementoCadastroPrestador"
             android:layout_width="300dp"
@@ -360,21 +375,6 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/tv_complementoCadastroPrestador"
             app:layout_constraintTop_toBottomOf="@+id/et_numeroCadastroPrestador" />
-
-        <TextView
-            android:id="@+id/tv_profissaoCadastroPrestador"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:fontFamily="@font/roboto"
-            android:text="Profissão"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/et_profissaoCadastroPrestador"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.09"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/et_complementoCadastroPrestador"
-            app:layout_constraintVertical_bias="0.0" />
 
         <EditText
             android:id="@+id/et_profissaoCadastroPrestador"
