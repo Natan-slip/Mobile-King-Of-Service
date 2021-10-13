@@ -3,12 +3,25 @@ package br.com.kingofservice
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+
+    lateinit var editUser: EditText
+    lateinit var editPassword: EditText
+    lateinit var btnLogin: Button
+    lateinit var tvMensagemErro: TextView
+    lateinit var tvCrieSuaConta: TextView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        //Remover a appBar
+        supportActionBar!!.hide()
 
         btt_login.setOnClickListener {
             IrParaTelaLogin()

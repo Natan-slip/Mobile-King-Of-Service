@@ -22,6 +22,10 @@ class TelaCadastroCliente : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tela_cadastro_cliente)
 
+        supportActionBar!!.title = "Novo usuário"
+        supportActionBar!!.subtitle = "cadastre os seus dados"
+        supportActionBar!!.setBackgroundDrawable(getDrawable(R.drawable.toolbar))
+
 
         //Criar um calendário:
         val calendario = Calendar.getInstance() //Instancioams o Calendar da classe Java.util

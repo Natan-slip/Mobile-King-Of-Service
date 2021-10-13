@@ -59,6 +59,16 @@
         tools:ignore="MissingConstraints" />
 
     <TextView
+        android:id="@+id/tv_mensagem_erro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:textColor="@android:color/holo_red_light"
+        android:layout_below="@id/tv_fazerLogin"
+        android:layout_centerHorizontal="true"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
         android:id="@+id/tv_emailLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
