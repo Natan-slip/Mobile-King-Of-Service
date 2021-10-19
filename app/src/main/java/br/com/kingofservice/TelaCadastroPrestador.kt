@@ -1,9 +1,15 @@
 package br.com.kingofservice
 
 import android.app.DatePickerDialog
+import android.content.Intent
 import android.graphics.Bitmap
+import android.graphics.drawable.Icon
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
+import android.view.View
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_tela_cadastro_prestador.*
@@ -11,12 +17,18 @@ import java.util.*
 
 class TelaCadastroPrestador : AppCompatActivity() {
 
-    var imageBitmap: Bitmap? = null
-    lateinit var imgProfile: ImageView
+    lateinit var iconSalvar: Icon
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tela_cadastro_prestador)
+
+//        iconSalvar = findViewById(R.id.menu_save)
+//
+//        iconSalvar.setOnClickListener {
+//            val intent = Intent(this, TelaFeed::class.java)
+//            startActivity(intent)
+//        }
 
         supportActionBar!!.title = "Novo Prestador"
         supportActionBar!!.subtitle = "cadastre os seus dados"
@@ -47,10 +59,24 @@ class TelaCadastroPrestador : AppCompatActivity() {
             )
             dpd.show()
         }
+    }
 
-            Toast.makeText(this, "Dados gravados com sucesso!!", Toast.LENGTH_SHORT).show()
+    // Parte de Menu
 
-            finish()
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_novo_usuario,menu);
+        return true;
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+        when (item.itemId) {
+            R.id.menu_save -> Toast.makeText(this,"Salvado com sucesso!!", Toast.LENGTH_SHORT).show()
+            R.id.menu_cancel -> Toast.makeText(this,"Cancelado com sucesso!!", Toast.LENGTH_SHORT).show()
+            R.id.menu_help -> Toast.makeText(this,"Ajuda com sucesso!!", Toast.LENGTH_SHORT).show()
         }
+
+        return super.onOptionsItemSelected(item)
+    }
 
 }

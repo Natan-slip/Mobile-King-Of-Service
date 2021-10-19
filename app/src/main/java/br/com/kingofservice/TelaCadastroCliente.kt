@@ -26,7 +26,6 @@ class TelaCadastroCliente : AppCompatActivity() {
         supportActionBar!!.subtitle = "cadastre os seus dados"
         supportActionBar!!.setBackgroundDrawable(getDrawable(R.drawable.toolbar))
 
-
         //Criar um calendário:
         val calendario = Calendar.getInstance() //Instancioams o Calendar da classe Java.util
         val ano = calendario.get(Calendar.YEAR) //Pegamos dessa instância de Calendar o ano
@@ -52,5 +51,23 @@ class TelaCadastroCliente : AppCompatActivity() {
             )
             dpd.show()
         }
+    }
+
+    // Parte de Menu
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_novo_usuario,menu);
+        return true;
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+        when (item.itemId) {
+            R.id.menu_save -> Toast.makeText(this,"Salvado com sucesso!!", Toast.LENGTH_SHORT).show()
+            R.id.menu_cancel -> Toast.makeText(this,"Cancelado com sucesso!!", Toast.LENGTH_SHORT).show()
+            R.id.menu_help -> Toast.makeText(this,"Ajuda com sucesso!!", Toast.LENGTH_SHORT).show()
+        }
+
+        return super.onOptionsItemSelected(item)
     }
 }
