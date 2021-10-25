@@ -36,7 +36,7 @@
         android:textColor="@color/colorPrimary"
         android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.862"
+        app:layout_constraintHorizontal_bias="0.76"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/id_containerLogo" />
 
@@ -48,7 +48,7 @@
         android:text="Selecione seu "
         android:textSize="22sp"
         app:layout_constraintEnd_toStartOf="@+id/tv_tipoUsuarioCor"
-        app:layout_constraintHorizontal_bias="0.954"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/id_containerLogo" />
 
@@ -72,10 +72,10 @@
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btt_prestador"
-        app:layout_constraintHorizontal_bias="0.541"
+        app:layout_constraintHorizontal_bias="0.39"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/iv_cliente"
-        app:layout_constraintVertical_bias="0.107" />
+        app:layout_constraintVertical_bias="0.108" />
 
     <ImageView
         android:id="@+id/iv_prestador"
@@ -91,13 +91,13 @@
         android:id="@+id/btt_prestador"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="52dp"
         android:backgroundTint="@color/material_on_primary_disabled"
-        android:text="Prestador de Serviço"
+        android:text="Prestador"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/iv_prestador"
-        app:layout_constraintVertical_bias="0.107" />
+        app:layout_constraintVertical_bias="0.108" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

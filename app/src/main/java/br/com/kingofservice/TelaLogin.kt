@@ -33,7 +33,7 @@ class TelaLogin : AppCompatActivity() {
         btnFazerLogin = findViewById(R.id.btt_fazerLogin)
 
         btnFazerLogin.setOnClickListener {
-            val intent = Intent(this, TelaFeed::class.java)
+            val intent = Intent(this, TelaListagemDeServicos::class.java)
             startActivity(intent)
         }
 
