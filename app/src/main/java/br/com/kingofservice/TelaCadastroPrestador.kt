@@ -17,8 +17,6 @@ import java.util.*
 
 class TelaCadastroPrestador : AppCompatActivity() {
 
-    lateinit var iconSalvar: Icon
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tela_cadastro_prestador)
@@ -68,12 +66,33 @@ class TelaCadastroPrestador : AppCompatActivity() {
         return true;
     }
 
+    private fun trocaTela() {
+        val intent = Intent(this, TelaListagem::class.java)
+        startActivity(intent)
+    }
+
+    private fun cancelarTela() {
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
+    }
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
         when (item.itemId) {
-            R.id.menu_save -> Toast.makeText(this,"Salvado com sucesso!!", Toast.LENGTH_SHORT).show()
-            R.id.menu_cancel -> Toast.makeText(this,"Cancelado com sucesso!!", Toast.LENGTH_SHORT).show()
-            R.id.menu_help -> Toast.makeText(this,"Ajuda com sucesso!!", Toast.LENGTH_SHORT).show()
+            R.id.menu_save -> {
+                trocaTela()
+                return true
+            }
+
+            R.id.menu_cancel -> {
+                cancelarTela()
+                return true
+            }
+
+            R.id.menu_help -> Toast.makeText(this
+                ,"Ajuda com sucesso!!",
+                Toast.LENGTH_SHORT).show()
+
         }
 
         return super.onOptionsItemSelected(item)

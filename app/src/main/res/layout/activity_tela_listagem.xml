@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="1dp"
+    android:fillViewport="true">
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/Tela_Listagem">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container_cabecalho"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#94121212"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/container_pesquisar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/background_container_pesquisar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0">
+
+            <ImageView
+                android:id="@+id/iv_localizacao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/localizacao_24" />
+
+            <TextView
+                android:id="@+id/tv_localizacao_atual"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="17dp"
+                android:text="Localização atual"
+                app:layout_constraintStart_toEndOf="@+id/iv_localizacao"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_localizacao_atual2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="17dp"
+                android:text="Grande São Paulo"
+                app:layout_constraintStart_toEndOf="@+id/tv_localizacao_atual"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/et_pesquisar"
+                android:layout_width="270dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/edit_text_login_background"
+                android:drawableEnd="@drawable/lupa"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:hint="O que você precisa?"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_localizacao" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container_listagem"
+        android:layout_width="match_parent"
+        android:layout_height="480dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="40dp"
+        android:background="#E5E5E5"
+        android:elevation="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/container_cabecalho"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ImageView
+            android:id="@+id/iv_perfil"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/foto_usuario" />
+
+        <ImageView
+            android:id="@+id/iv_perfil3"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divisao2"
+            app:srcCompat="@drawable/foto_usuario" />
+
+        <ImageView
+            android:id="@+id/iv_perfil2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divisao"
+            app:srcCompat="@drawable/foto_usuario" />
+
+        <TextView
+            android:id="@+id/tv_nome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Fulano de Tal"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/iv_perfil"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_nome2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Fulano de Tal"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/iv_perfil2"
+            app:layout_constraintTop_toBottomOf="@+id/divisao" />
+
+        <TextView
+            android:id="@+id/tv_nome3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Fulano de Tal"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/iv_perfil3"
+            app:layout_constraintTop_toBottomOf="@+id/divisao2" />
+
+        <TextView
+            android:id="@+id/tv_avaliacao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Avaliações"
+            android:textColor="#000000"
+            app:layout_constraintStart_toStartOf="@+id/tv_nome"
+            app:layout_constraintTop_toBottomOf="@+id/tv_nome" />
+
+        <TextView
+            android:id="@+id/tv_avaliacao2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Avaliações"
+            android:textColor="#000000"
+            app:layout_constraintStart_toStartOf="@+id/tv_nome2"
+            app:layout_constraintTop_toBottomOf="@+id/tv_nome2" />
+
+        <TextView
+            android:id="@+id/tv_avaliacao3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Avaliações"
+            android:textColor="#000000"
+            app:layout_constraintStart_toStartOf="@+id/tv_nome3"
+            app:layout_constraintTop_toBottomOf="@+id/tv_nome3" />
+
+        <RatingBar
+            android:id="@+id/avaliacao"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:scaleX="0.4"
+            android:scaleY="0.4"
+            android:translationX="-75dp"
+            android:translationY="-2dp"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="@+id/tv_avaliacao"
+            app:layout_constraintTop_toBottomOf="@+id/tv_avaliacao" />
+
+        <RatingBar
+            android:id="@+id/avaliacao2"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:scaleX="0.4"
+            android:scaleY="0.4"
+            android:translationX="-75dp"
+            android:translationY="-2dp"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="@+id/tv_avaliacao2"
+            app:layout_constraintTop_toBottomOf="@+id/tv_avaliacao2" />
+
+        <RatingBar
+            android:id="@+id/avaliacao3"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:scaleX="0.4"
+            android:scaleY="0.4"
+            android:translationX="-75dp"
+            android:translationY="-2dp"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="@+id/tv_avaliacao3"
+            app:layout_constraintTop_toBottomOf="@+id/tv_avaliacao3" />
+
+        <TextView
+            android:id="@+id/tv_descricao"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="8sp"
+            android:text="Descrição: Meu nome é fulano de Tal, trabalho nessa área a 30 anos e bla bla bla bla"
+            android:textAlignment="viewStart"
+            android:textColor="#000000"
+            android:textSize="11sp"
+            app:layout_constraintStart_toStartOf="@+id/avaliacao"
+            app:layout_constraintTop_toBottomOf="@+id/avaliacao" />
+
+        <TextView
+            android:id="@+id/tv_descricao2"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="8sp"
+            android:text="Descrição: Meu nome é fulano de Tal, trabalho nessa área a 30 anos e bla bla bla bla"
+            android:textAlignment="viewStart"
+            android:textColor="#000000"
+            android:textSize="11sp"
+            app:layout_constraintStart_toStartOf="@+id/avaliacao2"
+            app:layout_constraintTop_toBottomOf="@+id/avaliacao2" />
+
+        <TextView
+            android:id="@+id/tv_descricao3"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="8sp"
+            android:text="Descrição: Meu nome é fulano de Tal, trabalho nessa área a 30 anos e bla bla bla bla"
+            android:textAlignment="viewStart"
+            android:textColor="#000000"
+            android:textSize="11sp"
+            app:layout_constraintStart_toStartOf="@+id/avaliacao3"
+            app:layout_constraintTop_toBottomOf="@+id/avaliacao3" />
+
+        <View
+            android:id="@+id/divisao"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="20dp"
+            android:background="#000000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_descricao" />
+
+        <View
+            android:id="@+id/divisao2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="20dp"
+            android:background="#000000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_descricao2" />
+
+        <Button
+            android:id="@+id/btn_ver_perfil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="#FF7A00"
+            android:backgroundTint="#FF7A00"
+            android:drawableEnd="@drawable/avancar"
+            android:scaleX="0.8"
+            android:scaleY="0.8"
+            android:text="Ver perfil"
+            android:textSize="12sp"
+            app:cornerRadius="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_nome"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_ver_perfil2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="#FF7A00"
+            android:backgroundTint="#FF7A00"
+            android:drawableEnd="@drawable/avancar"
+            android:scaleX="0.8"
+            android:scaleY="0.8"
+            android:text="Ver perfil"
+            android:textSize="12sp"
+            app:cornerRadius="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_nome2"
+            app:layout_constraintTop_toBottomOf="@+id/divisao" />
+
+        <Button
+            android:id="@+id/btn_ver_perfil3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="#FF7A00"
+            android:backgroundTint="#FF7A00"
+            android:drawableEnd="@drawable/avancar"
+            android:scaleX="0.8"
+            android:scaleY="0.8"
+            android:text="Ver perfil"
+            android:textSize="12sp"
+            app:cornerRadius="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_nome3"
+            app:layout_constraintTop_toBottomOf="@+id/divisao2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
