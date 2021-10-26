@@ -3,11 +3,12 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="409dp"
-    android:layout_height="729dp"
-    tools:layout_editor_absoluteX="dp"
+    android:layout_width="410dp"
+    android:layout_height="740dp"
+    tools:layout_editor_absoluteX="0dp"
     tools:layout_editor_absoluteY="1dp"
-    android:fillViewport="true">
+    android:fillViewport="true"
+    android:layout_gravity="center">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -18,10 +19,11 @@
             android:id="@+id/card_view_profile"
             android:layout_width="100dp"
             android:layout_height="100dp"
+            android:layout_marginTop="59dp"
             android:foregroundGravity="center"
             app:cardCornerRadius="45dp"
-            android:layout_marginTop="15dp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.48"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -43,61 +45,142 @@
             android:text="Trocar foto"
             android:textColor="@color/colorPrimary"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.48"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/card_view_profile" />
 
-        <TextView
-            android:id="@+id/tv_nomeCadastroCliente"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/roboto"
-            android:text="Nome"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/et_nomeCadastroCliente"
+        <EditText
+            android:id="@+id/et_nomeCadastroCliente"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="54dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="55dp"
+            android:background="@drawable/edit_text_login_background"
+            android:drawableStart="@drawable/name_24"
+            android:paddingLeft="10dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.161"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_trocar_foto"
-            app:layout_constraintVertical_bias="0.463" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_nomeCadastroCliente" />
 
-        <TextView
-            android:id="@+id/tv_dataNascimentoCadastroCliente"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:fontFamily="@font/roboto"
-            android:text="Data Nascimento"
-            android:textStyle="bold"
+        <EditText
+            android:id="@+id/et_senhaCadastroCliente"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="54dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="55dp"
+            android:background="@drawable/edit_text_login_background"
+            android:drawableStart="@drawable/lock_24"
+            android:inputType="textPassword"
+            android:paddingLeft="10dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/et_nomeCadastroCliente" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_senhaCadastroCliente" />
+
+        <EditText
+            android:id="@+id/et_emailCadastroCliente"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="54dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="55dp"
+            android:background="@drawable/edit_text_login_background"
+            android:drawableStart="@drawable/email_24"
+            android:inputType="textEmailAddress"
+            android:paddingLeft="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_emailCadastroCliente" />
 
         <TextView
             android:id="@+id/tv_emailCadastroCliente"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="15dp"
             android:fontFamily="@font/roboto"
             android:text="E-mail"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.161"
+            app:layout_constraintHorizontal_bias="0.14"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/et_dataNascimentoCadastroCliente" />
 
         <TextView
-            android:id="@+id/tv_senhaCadastroCliente"
+            android:id="@+id/tv_nomeCadastroCliente"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="28dp"
             android:fontFamily="@font/roboto"
-            android:text="Senha"
+            android:text="Nome"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.162"
+            app:layout_constraintHorizontal_bias="0.14"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/et_emailCadastroCliente" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_trocar_foto" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup_cadastroCliente"
+            android:layout_width="333dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="75dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="25dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_generoCadastroCliente">
+
+            <RadioButton
+                android:id="@+id/radio_masculino"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/colorPrimaryDark"
+                android:drawablePadding="6dp"
+                android:drawableTint="@color/colorPrimary"
+                android:text="Masculino" />
+
+            <RadioButton
+                android:id="@+id/radio_feminino"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/colorPrimaryDark"
+                android:drawablePadding="6dp"
+                android:drawableTint="@color/colorPrimary"
+                android:text="Feminino" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tv_estadoCadastroCliente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/roboto"
+            android:text="Estado"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_cepCadastroCliente" />
+
+        <TextView
+            android:id="@+id/tv_dataNascimentoCadastroCliente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/roboto"
+            android:text="Data Nascimento"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.18"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_nomeCadastroCliente" />
 
         <TextView
             android:id="@+id/tv_generoCadastroCliente"
@@ -108,293 +191,218 @@
             android:text="Genêro"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.162"
+            app:layout_constraintHorizontal_bias="0.14"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/et_senhaCadastroCliente" />
+
+        <EditText
+            android:id="@+id/et_cepCadastroCliente"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="59dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="55dp"
+            android:background="@drawable/edit_text_login_background"
+            android:drawableStart="@drawable/localizacao_24"
+            android:paddingLeft="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_cepCadastroCliente"
+            tools:ignore="MissingConstraints" />
 
         <TextView
             android:id="@+id/tv_cepCadastroCliente"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="15dp"
             android:fontFamily="@font/roboto"
             android:text="CEP"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.156"
+            app:layout_constraintHorizontal_bias="0.16"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/radioGroup_cadastroCliente"
             tools:ignore="MissingConstraints" />
 
         <TextView
-            android:id="@+id/tv_estadoCadastroCliente"
+            android:id="@+id/tv_senhaCadastroCliente"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="15dp"
             android:fontFamily="@font/roboto"
-            android:text="Estado"
+            android:text="Senha"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/et_estadoCadastroCliente"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.161"
+            app:layout_constraintHorizontal_bias="0.14"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/et_cepCadastroCliente"
-            app:layout_constraintVertical_bias="0.0" />
-
-        <EditText
-            android:id="@+id/et_nomeCadastroCliente"
-            android:layout_width="300dp"
-            android:layout_height="44dp"
-            android:layout_marginTop="64dp"
-            android:background="@drawable/edit_text_login_background"
-            android:drawableStart="@drawable/name_24"
-            android:paddingLeft="10dp"
-            app:layout_constraintEnd_toEndOf="@+id/tv_nomeCadastroCliente"
-            app:layout_constraintHorizontal_bias="0.003"
-            app:layout_constraintStart_toStartOf="@+id/tv_nomeCadastroCliente"
-            app:layout_constraintTop_toBottomOf="@+id/tv_trocar_foto" />
-
-        <EditText
-            android:id="@+id/et_dataNascimentoCadastroCliente"
-            android:layout_width="300dp"
-            android:layout_height="44dp"
-            android:layout_marginTop="56dp"
-            android:paddingLeft="10dp"
-            android:drawableStart="@drawable/calendario_24"
-            android:background="@drawable/edit_text_login_background"
-            app:layout_constraintEnd_toEndOf="@+id/tv_dataNascimentoCadastroCliente"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/tv_dataNascimentoCadastroCliente"
-            app:layout_constraintTop_toBottomOf="@+id/et_nomeCadastroCliente" />
-
-        <EditText
-            android:id="@+id/et_emailCadastroCliente"
-            android:layout_width="300dp"
-            android:layout_height="44dp"
-            android:layout_marginTop="52dp"
-            android:inputType="textEmailAddress"
-            android:paddingLeft="10dp"
-            android:drawableStart="@drawable/email_24"
-            android:background="@drawable/edit_text_login_background"
-            app:layout_constraintEnd_toEndOf="@+id/tv_emailCadastroPrestador"
-            app:layout_constraintHorizontal_bias="0.003"
-            app:layout_constraintStart_toStartOf="@+id/tv_emailCadastroCliente"
-            app:layout_constraintTop_toBottomOf="@+id/et_dataNascimentoCadastroCliente" />
-
-        <EditText
-            android:id="@+id/et_senhaCadastroCliente"
-            android:layout_width="300dp"
-            android:layout_height="44dp"
-            android:layout_marginTop="52dp"
-            android:inputType="textPassword"
-            android:paddingLeft="10dp"
-            android:drawableStart="@drawable/lock_24"
-            android:background="@drawable/edit_text_login_background"
-            app:layout_constraintEnd_toEndOf="@+id/tv_senhaCadastroCliente"
-            app:layout_constraintHorizontal_bias="0.003"
-            app:layout_constraintStart_toStartOf="@+id/tv_senhaCadastroCliente"
             app:layout_constraintTop_toBottomOf="@+id/et_emailCadastroCliente" />
 
         <EditText
-            android:id="@+id/et_cepCadastroCliente"
-            android:layout_width="300dp"
-            android:layout_height="44dp"
-            android:layout_marginTop="52dp"
+            android:id="@+id/et_dataNascimentoCadastroCliente"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="54dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="55dp"
             android:background="@drawable/edit_text_login_background"
-            android:drawableStart="@drawable/localizacao_24"
+            android:drawableStart="@drawable/calendario_24"
             android:paddingLeft="10dp"
-            app:layout_constraintEnd_toEndOf="@+id/tv_cepCadastroCliente"
-            app:layout_constraintHorizontal_bias="0.003"
-            app:layout_constraintStart_toStartOf="@+id/tv_cepCadastroCliente"
-            app:layout_constraintTop_toBottomOf="@+id/radioGroup_cadastroCliente"
-            tools:ignore="MissingConstraints" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_dataNascimentoCadastroCliente" />
 
         <EditText
             android:id="@+id/et_estadoCadastroCliente"
-            android:layout_width="300dp"
-            android:layout_height="44dp"
-            android:layout_marginTop="56dp"
-            android:paddingLeft="10dp"
-            android:drawableStart="@drawable/localizacao_24"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="54dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="55dp"
             android:background="@drawable/edit_text_login_background"
-            app:layout_constraintEnd_toEndOf="@+id/tv_estadoCadastroCliente"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/tv_estadoCadastroCliente"
-            app:layout_constraintTop_toBottomOf="@+id/et_cepCadastroCliente" />
+            android:drawableStart="@drawable/localizacao_24"
+            android:paddingLeft="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_estadoCadastroCliente" />
 
         <TextView
             android:id="@+id/tv_cidadeCadastroCliente"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="15dp"
             android:fontFamily="@font/roboto"
             android:text="Cidade"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/et_cidadeCadastroCliente"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.164"
+            app:layout_constraintHorizontal_bias="0.15"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/et_estadoCadastroCliente"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintTop_toBottomOf="@+id/et_estadoCadastroCliente" />
 
         <TextView
             android:id="@+id/tv_bairroCadastroCliente"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="15dp"
             android:fontFamily="@font/roboto"
             android:text="Bairro"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/et_bairroCadastroCliente"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.164"
+            app:layout_constraintHorizontal_bias="0.15"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/et_cidadeCadastroCliente"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintTop_toBottomOf="@+id/et_cidadeCadastroCliente" />
 
         <TextView
             android:id="@+id/tv_ruaCadastroCliente"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="12dp"
             android:fontFamily="@font/roboto"
             android:text="Rua"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/et_ruaCadastroCliente"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.161"
+            app:layout_constraintHorizontal_bias="0.151"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/et_bairroCadastroCliente"
-            app:layout_constraintVertical_bias="0.0" />
-
-        <TextView
-            android:id="@+id/tv_numeroCadastroCliente"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:fontFamily="@font/roboto"
-            android:text="Numero"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/et_numeroCadastroCliente"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.164"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/et_ruaCadastroCliente"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintTop_toBottomOf="@+id/et_bairroCadastroCliente" />
 
         <TextView
             android:id="@+id/tv_complementoCadastroCliente"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="12dp"
             android:fontFamily="@font/roboto"
             android:text="Complemento"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/et_complementoCadastroCliente"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.183"
+            app:layout_constraintHorizontal_bias="0.17"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/et_numeroCadastroCliente"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintTop_toBottomOf="@+id/et_numeroCadastroCliente" />
 
-        <EditText
-            android:id="@+id/et_cidadeCadastroCliente"
-            android:layout_width="300dp"
-            android:layout_height="44dp"
-            android:layout_marginTop="56dp"
-            android:paddingLeft="10dp"
-            android:drawableStart="@drawable/localizacao_24"
-            android:background="@drawable/edit_text_login_background"
-            app:layout_constraintEnd_toEndOf="@+id/tv_cidadeCadastroCliente"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/tv_cidadeCadastroCliente"
-            app:layout_constraintTop_toBottomOf="@+id/et_estadoCadastroCliente" />
-
-        <EditText
-            android:id="@+id/et_bairroCadastroCliente"
-            android:layout_width="300dp"
-            android:layout_height="44dp"
-            android:layout_marginTop="56dp"
-            android:paddingLeft="10dp"
-            android:drawableStart="@drawable/localizacao_24"
-            android:background="@drawable/edit_text_login_background"
-            app:layout_constraintEnd_toEndOf="@+id/tv_bairroCadastroCliente"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/tv_bairroCadastroCliente"
-            app:layout_constraintTop_toBottomOf="@+id/et_cidadeCadastroCliente" />
-
-        <EditText
-            android:id="@+id/et_ruaCadastroCliente"
-            android:layout_width="300dp"
-            android:layout_height="44dp"
-            android:layout_marginTop="48dp"
-            android:paddingLeft="10dp"
-            android:drawableStart="@drawable/localizacao_24"
-            android:background="@drawable/edit_text_login_background"
-            app:layout_constraintEnd_toEndOf="@+id/tv_ruaCadastroCliente"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/tv_ruaCadastroCliente"
-            app:layout_constraintTop_toBottomOf="@+id/et_bairroCadastroCliente" />
-
-        <EditText
-            android:id="@+id/et_numeroCadastroCliente"
-            android:layout_width="300dp"
-            android:layout_height="44dp"
-            android:layout_marginTop="60dp"
-            android:background="@drawable/edit_text_login_background"
-            android:drawableStart="@drawable/localizacao_24"
-            android:paddingLeft="10dp"
-            app:layout_constraintEnd_toEndOf="@+id/tv_numeroCadastroCliente"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/tv_numeroCadastroCliente"
+        <TextView
+            android:id="@+id/tv_numeroCadastroCliente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/roboto"
+            android:text="Numero"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.154"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/et_ruaCadastroCliente" />
 
         <EditText
+            android:id="@+id/et_cidadeCadastroCliente"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="54dp"
+            android:background="@drawable/edit_text_login_background"
+            android:drawableStart="@drawable/localizacao_24"
+            android:paddingLeft="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_cidadeCadastroCliente" />
+
+        <EditText
+            android:id="@+id/et_bairroCadastroCliente"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="54dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="55dp"
+            android:background="@drawable/edit_text_login_background"
+            android:drawableStart="@drawable/localizacao_24"
+            android:paddingLeft="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_bairroCadastroCliente" />
+
+        <EditText
+            android:id="@+id/et_ruaCadastroCliente"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="54dp"
+            android:layout_marginTop="17dp"
+            android:layout_marginEnd="55dp"
+            android:background="@drawable/edit_text_login_background"
+            android:drawableStart="@drawable/localizacao_24"
+            android:paddingLeft="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_ruaCadastroCliente" />
+
+        <EditText
+            android:id="@+id/et_numeroCadastroCliente"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="54dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="55dp"
+            android:background="@drawable/edit_text_login_background"
+            android:drawableStart="@drawable/localizacao_24"
+            android:paddingLeft="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_numeroCadastroCliente" />
+
+        <EditText
             android:id="@+id/et_complementoCadastroCliente"
-            android:layout_width="300dp"
-            android:layout_height="44dp"
-            android:layout_marginTop="56dp"
-            android:layout_marginBottom="50dp"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="54dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="55dp"
+            android:layout_marginBottom="65dp"
             android:background="@drawable/edit_text_login_background"
             android:drawableStart="@drawable/localizacao_24"
             android:paddingLeft="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/tv_complementoCadastroCliente"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/tv_complementoCadastroCliente"
-            app:layout_constraintTop_toBottomOf="@+id/et_numeroCadastroCliente" />
-
-        <RadioGroup
-            android:id="@+id/radioGroup_cadastroCliente"
-            android:layout_width="333dp"
-            android:layout_height="47dp"
-            android:layout_marginTop="52dp"
-            android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="@+id/tv_generoCadastroCliente"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/tv_generoCadastroCliente"
-            app:layout_constraintTop_toBottomOf="@+id/et_senhaCadastroCliente">
-
-            <RadioButton
-                android:id="@+id/radio_masculino"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:buttonTint="@color/colorPrimaryDark"
-                android:drawablePadding="8dp"
-                android:drawableTint="@color/colorPrimary"
-                android:text="Masculino" />
-
-            <RadioButton
-                android:id="@+id/radio_feminino"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:buttonTint="@color/colorPrimaryDark"
-                android:drawablePadding="8dp"
-                android:drawableTint="@color/colorPrimary"
-                android:text="Feminino" />
-        </RadioGroup>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_complementoCadastroCliente" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

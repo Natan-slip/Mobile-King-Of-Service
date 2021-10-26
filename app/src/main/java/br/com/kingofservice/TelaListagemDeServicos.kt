@@ -12,9 +12,10 @@ class TelaListagemDeServicos : AppCompatActivity() {
         supportActionBar!!.title = "Listagem de Serviços"
         supportActionBar!!.setBackgroundDrawable(getDrawable(R.drawable.toolbar))
 
-//        @Override public boolean onCreateOptionsMenu(menu: Menu?) {
-//            menuInflater.inflate(R.menu.menu_novo_usuario,menu);
-//            return true;
-//        }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_busca,menu);
+        return true;
     }
 }
