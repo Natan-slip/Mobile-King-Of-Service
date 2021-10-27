@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".TelaPerfilPrestador">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_profile"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="28dp"
+            android:foregroundGravity="center"
+            app:cardCornerRadius="45dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.083"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_profile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="TODO"
+                android:scaleType="centerCrop"
+                android:src="@drawable/profile" />
+
+        </androidx.cardview.widget.CardView>
+
+        <EditText
+            android:layout_width="252dp"
+            android:layout_height="95dp"
+            android:hint="Descrição:  long established fact that a reader will be simply dummy text"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="155dp"
+            tools:layout_editor_absoluteY="28dp"
+            android:background="@android:color/white"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fulano de Tal"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="26dp"
+            tools:layout_editor_absoluteY="164dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#FF7A00"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="191dp" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#FF7A00"
+            tools:layout_editor_absoluteX="-16dp"
+            tools:layout_editor_absoluteY="512dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/localizacao_24"
+            android:text="Av. Brasil, 157 - São Paulo, SP"
+            android:drawablePadding="6dp"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="217dp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/localizacao_24"
+            android:drawablePadding="6dp"
+            android:text="Av. Brasil, 157 - São Paulo, SP"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="260dp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/localizacao_24"
+            android:drawablePadding="6dp"
+            android:text="Fulano de Tal"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="302dp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="6dp"
+            android:text="Habilidades:"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="362dp" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_prestador2"
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            android:layout_marginTop="8dp"
+            app:cardCornerRadius="45dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.08"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:id="@+id/iv_prestador2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="TODO"
+                android:scaleType="centerCrop"
+                android:src="@drawable/icon_manuntecao" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_titlePrestador2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Técnico"
+            android:textColor="#000000"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/card_view_prestador2"
+            app:layout_constraintHorizontal_bias="0.466"
+            app:layout_constraintStart_toStartOf="@+id/card_view_prestador2"
+            app:layout_constraintTop_toBottomOf="@+id/card_view_prestador2" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

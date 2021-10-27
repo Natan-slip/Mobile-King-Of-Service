@@ -7,21 +7,18 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 
-class TelaListagem : AppCompatActivity() {
+class TelaPerfilPrestador : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_tela_listagem)
+        setContentView(R.layout.activity_tela_perfil_prestador)
 
         supportActionBar!!.title = "King Of Services"
         supportActionBar!!.setBackgroundDrawable(getDrawable(R.drawable.toolbar))
-
-
-
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-    menuInflater.inflate(R.menu.menu_opcoes,menu);
-    return true;
+        menuInflater.inflate(R.menu.menu_opcoes,menu);
+        return true;
     }
 
     private fun TelaCategorias() {
@@ -66,5 +63,4 @@ class TelaListagem : AppCompatActivity() {
 
         return super.onOptionsItemSelected(item)
     }
-
 }
