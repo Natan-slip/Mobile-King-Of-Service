@@ -1,34 +1,31 @@
-package br.com.kingofservice
+package br.com.kingofservice.ui
 
 import android.app.DatePickerDialog
 import android.content.Intent
-import android.graphics.Bitmap
-import android.graphics.drawable.Icon
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
-import android.view.View
-import android.widget.Button
-import android.widget.ImageView
 import android.widget.Toast
-import kotlinx.android.synthetic.main.activity_tela_cadastro_prestador.*
+import br.com.kingofservice.Cliente
+import br.com.kingofservice.R
+import br.com.kingofservice.RetrofitFactory
+import kotlinx.android.synthetic.main.activity_tela_cadastro_cliente.*
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 import java.util.*
 
-class TelaCadastroPrestador : AppCompatActivity() {
+const val CODE_IMAGE = 100
+
+class TelaCadastroCliente : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_tela_cadastro_prestador)
+        setContentView(R.layout.activity_tela_cadastro_cliente)
 
-//        iconSalvar = findViewById(R.id.menu_save)
-//
-//        iconSalvar.setOnClickListener {
-//            val intent = Intent(this, TelaFeed::class.java)
-//            startActivity(intent)
-//        }
-
-        supportActionBar!!.title = "Novo Prestador"
+        supportActionBar!!.title = "Novo usuário"
         supportActionBar!!.subtitle = "cadastre os seus dados"
         supportActionBar!!.setBackgroundDrawable(getDrawable(R.drawable.toolbar))
 
@@ -39,7 +36,7 @@ class TelaCadastroPrestador : AppCompatActivity() {
         val dia = calendario.get(Calendar.DAY_OF_MONTH) //Pegamos o dia do mês
 
         //Abrir o componente DatePicker
-        et_dataNascimentoCadastroPrestador.setOnClickListener {
+        et_dataNascimentoCadastroCliente.setOnClickListener {
             val dpd = DatePickerDialog(
                 this,
                 DatePickerDialog.OnDateSetListener { view, _ano, _mes, _dia ->
@@ -52,7 +49,7 @@ class TelaCadastroPrestador : AppCompatActivity() {
                     if (_mes < 9) {
                         mesZero = "0${_mes + 2}"
                     }
-                    et_dataNascimentoCadastroPrestador.setText("$diaZero/$mesZero/$_ano")
+                    et_dataNascimentoCadastroCliente.setText("$diaZero/$mesZero/$_ano")
                 }, ano, mes, dia
             )
             dpd.show()
@@ -65,6 +62,8 @@ class TelaCadastroPrestador : AppCompatActivity() {
         menuInflater.inflate(R.menu.menu_novo_usuario,menu);
         return true;
     }
+
+    private fun salvar()
 
     private fun trocaTela() {
         val intent = Intent(this, TelaListagem::class.java)
@@ -89,13 +88,33 @@ class TelaCadastroPrestador : AppCompatActivity() {
                 return true
             }
 
-            R.id.menu_help -> Toast.makeText(this
-                ,"Ajuda com sucesso!!",
+            R.id.menu_help -> Toast.makeText(
+                this,
+                "Ajuda com sucesso!!",
                 Toast.LENGTH_SHORT).show()
 
         }
 
         return super.onOptionsItemSelected(item)
     }
-
 }
+
+//private fun salvar() {
+//        val cliente = Cliente(0, et_nomeCadastroCliente.text.toString(), et_emailCadastroCliente.text.toString(), et_senhaCadastroCliente.text.toString())
+//
+//        //Obter uma instância da conexão com o Backend
+//        val remote = RetrofitFactory().retrofitService()
+//
+//        //Criar uma chamada para o endpoint /cep/json
+//        val call: Call<Cliente> =  remote.gravarCadastro(cliente)
+//
+//        //Executar a chamada para a api
+//        call.enqueue(object : Callback<Cliente> {
+//            override fun onResponse(call: Call<Cliente>, response: Response<Cliente>) {
+//                Toast.makeText(applicationContext, "deu certo", Toast.LENGTH_SHORT).show()
+//            }
+//
+//            override fun onFailure(call: Call<Cliente>, t: Throwable) {
+//                Toast.makeText(applicationContext, t.message, Toast.LENGTH_SHORT).show()
+//                Log.i("cliente", t.message.toString())
+//    }
