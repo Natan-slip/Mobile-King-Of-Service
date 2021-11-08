@@ -11,9 +11,6 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import br.com.kingofservice.*
-import com.google.gson.Gson
-import kotlinx.android.synthetic.main.activity_tela_cadastro_cliente.*
-import org.jetbrains.anko.doAsync
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -29,6 +26,8 @@ class TelaCadastroCliente : AppCompatActivity() {
     lateinit var etBairroCliente: EditText
     lateinit var etRuaCliente: EditText
 
+    lateinit var etDataNascimentoCliente: EditText
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tela_cadastro_cliente)
@@ -43,6 +42,7 @@ class TelaCadastroCliente : AppCompatActivity() {
         etEstadoCliente = findViewById(R.id.et_estadoCadastroCliente)
         etCidadeCliente = findViewById(R.id.et_cidadeCadastroCliente)
         etBairroCliente = findViewById(R.id.et_bairroCadastroCliente)
+        etDataNascimentoCliente = findViewById(R.id.et_dataNascimentoCadastroCliente)
 
         val btnCliente = findViewById<Button>(R.id.btn_Cliente)
 
@@ -81,7 +81,7 @@ class TelaCadastroCliente : AppCompatActivity() {
             val dia = calendario.get(Calendar.DAY_OF_MONTH) //Pegamos o dia do mês
 
             //Abrir o componente DatePicker
-            et_dataNascimentoCadastroCliente.setOnClickListener {
+        etDataNascimentoCliente.setOnClickListener {
                 val dpd = DatePickerDialog(
                     this,
                     DatePickerDialog.OnDateSetListener { view, _ano, _mes, _dia ->
@@ -94,7 +94,7 @@ class TelaCadastroCliente : AppCompatActivity() {
                         if (_mes < 9) {
                             mesZero = "0${_mes + 2}"
                         }
-                        et_dataNascimentoCadastroCliente.setText("$diaZero/$mesZero/$_ano")
+                        etDataNascimentoCliente.setText("$diaZero/$mesZero/$_ano")
                     }, ano, mes, dia
                 )
                 dpd.show()

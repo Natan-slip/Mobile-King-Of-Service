@@ -5,30 +5,30 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
-import android.widget.TextView
 import br.com.kingofservice.R
-import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
     lateinit var editUser: EditText
     lateinit var editPassword: EditText
     lateinit var btnLogin: Button
-    lateinit var tvMensagemErro: TextView
-    lateinit var tvCrieSuaConta: TextView
+    lateinit var btnCadastro: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        btnLogin = findViewById(R.id.btt_login)
+        btnCadastro = findViewById(R.id.btt_cadastro)
+
         //Remover a appBar
         supportActionBar!!.hide()
 
-        btt_login.setOnClickListener {
+        btnLogin.setOnClickListener {
             IrParaTelaLogin()
         }
 
-        btt_cadastro.setOnClickListener {
+        btnCadastro.setOnClickListener {
             IrParaTelaTipoUsuario()
         }
     }
@@ -49,27 +49,3 @@ class MainActivity : AppCompatActivity() {
         startActivity(telaTipoUsuario)
     }
 }
-
-//Código do menu para salvar e tals
-//
-//<?xml version="1.0" encoding="utf-8"?>
-//<menu xmlns:android="http://schemas.android.com/apk/res/android"
-//xmlns:app="http://schemas.android.com/apk/res-auto">
-//<item
-//android:id="@+id/menu_save"
-//android:title="Salvar"
-//android:icon="@drawable/save_24"
-//app:showAsAction="always"/>
-//
-//<item
-//android:id="@+id/menu_cancelar"
-//android:icon="@drawable/cancel_24"
-//android:title="Cancelar"
-//app:showAsAction="never"/>
-//
-//<item
-//android:id="@+id/menu_help"
-//android:icon="@drawable/help_24"
-//android:title="help"
-//app:showAsAction="never"/>
-//</menu>

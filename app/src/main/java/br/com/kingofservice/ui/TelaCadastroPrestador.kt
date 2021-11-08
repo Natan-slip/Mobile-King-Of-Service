@@ -2,32 +2,24 @@ package br.com.kingofservice.ui
 
 import android.app.DatePickerDialog
 import android.content.Intent
-import android.graphics.Bitmap
-import android.graphics.drawable.Icon
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.view.View
-import android.widget.Button
-import android.widget.ImageView
+import android.widget.EditText
 import android.widget.Toast
 import br.com.kingofservice.R
-import kotlinx.android.synthetic.main.activity_tela_cadastro_prestador.*
 import java.util.*
 
 class TelaCadastroPrestador : AppCompatActivity() {
+
+    lateinit var etDataNascimentoPrestador: EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tela_cadastro_prestador)
 
-//        iconSalvar = findViewById(R.id.menu_save)
-//
-//        iconSalvar.setOnClickListener {
-//            val intent = Intent(this, TelaFeed::class.java)
-//            startActivity(intent)
-//        }
+        etDataNascimentoPrestador = findViewById(R.id.et_dataNascimentoCadastroPrestador)
 
         supportActionBar!!.title = "Novo Prestador"
         supportActionBar!!.subtitle = "cadastre os seus dados"
@@ -40,7 +32,7 @@ class TelaCadastroPrestador : AppCompatActivity() {
         val dia = calendario.get(Calendar.DAY_OF_MONTH) //Pegamos o dia do mês
 
         //Abrir o componente DatePicker
-        et_dataNascimentoCadastroPrestador.setOnClickListener {
+        etDataNascimentoPrestador.setOnClickListener {
             val dpd = DatePickerDialog(
                 this,
                 DatePickerDialog.OnDateSetListener { view, _ano, _mes, _dia ->
@@ -53,7 +45,7 @@ class TelaCadastroPrestador : AppCompatActivity() {
                     if (_mes < 9) {
                         mesZero = "0${_mes + 2}"
                     }
-                    et_dataNascimentoCadastroPrestador.setText("$diaZero/$mesZero/$_ano")
+                    etDataNascimentoPrestador.setText("$diaZero/$mesZero/$_ano")
                 }, ano, mes, dia
             )
             dpd.show()

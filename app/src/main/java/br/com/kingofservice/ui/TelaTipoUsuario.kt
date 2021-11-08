@@ -3,19 +3,26 @@ package br.com.kingofservice.ui
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import br.com.kingofservice.R
-import kotlinx.android.synthetic.main.activity_tela_tipo_usuario.*
 
 class TelaTipoUsuario : AppCompatActivity() {
+
+    lateinit var btnPrestador: Button
+    lateinit var btnCliente: Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tela_tipo_usuario)
 
-        btt_prestador.setOnClickListener {
+        btnPrestador = findViewById(R.id.btt_prestador)
+        btnCliente = findViewById(R.id.btt_cliente)
+
+        btnPrestador.setOnClickListener {
             TelaCadastroPrestador()
         }
 
-        btt_cliente.setOnClickListener {
+        btnCliente.setOnClickListener {
             TelaCadastroCliente()
         }
     }
