@@ -3,6 +3,7 @@ package br.com.kingofservice.ui
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import br.com.kingofservice.R
 import kotlinx.android.synthetic.main.activity_tela_tipo_usuario.*
 
 class TelaTipoUsuario : AppCompatActivity() {

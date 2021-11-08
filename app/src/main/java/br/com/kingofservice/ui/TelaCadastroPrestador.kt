@@ -12,6 +12,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.Toast
+import br.com.kingofservice.R
 import kotlinx.android.synthetic.main.activity_tela_cadastro_prestador.*
 import java.util.*
 
