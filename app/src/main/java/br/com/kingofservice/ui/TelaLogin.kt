@@ -1,4 +1,4 @@
-package br.com.kingofservice
+package br.com.kingofservice.ui
 
 import android.content.Context
 import android.content.Intent
@@ -7,7 +7,6 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
-import br.com.kingofservice.R
 
 class TelaLogin : AppCompatActivity() {
 

@@ -1,4 +1,4 @@
-package br.com.kingofservice
+package br.com.kingofservice.ui
 
 import android.app.DatePickerDialog
 import android.content.Intent
@@ -8,7 +8,6 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.EditText
 import android.widget.Toast
-import br.com.kingofservice.R
 import java.util.*
 
 class TelaCadastroPrestador : AppCompatActivity() {

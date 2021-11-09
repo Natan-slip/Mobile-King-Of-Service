@@ -1,13 +1,10 @@
-package br.com.kingofservice
+package br.com.kingofservice.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
-import br.com.kingofservice.ui.R
-import br.com.kingofservice.ui.TelaLogin
-import br.com.kingofservice.ui.TelaTipoUsuario
 
 class MainActivity : AppCompatActivity() {
 
@@ -37,7 +34,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun IrParaTelaLogin(){
 
-        val telaLogin = Intent(this, TelaLogin::class.java)
+        val telaLogin = Intent(this,TelaLogin::class.java)
         startActivity(telaLogin)
     }
 
@@ -47,7 +44,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun IrParaTelaTipoUsuario(){
 
-        val telaTipoUsuario = Intent(this, TelaTipoUsuario::class.java)
+        val telaTipoUsuario = Intent(this,TelaTipoUsuario::class.java)
         startActivity(telaTipoUsuario)
     }
 }

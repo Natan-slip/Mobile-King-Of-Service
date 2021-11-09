@@ -1,10 +1,9 @@
-package br.com.kingofservice
+package br.com.kingofservice.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import br.com.kingofservice.R
 
 class TelaTipoUsuario : AppCompatActivity() {
 
