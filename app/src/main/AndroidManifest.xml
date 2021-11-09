@@ -13,7 +13,6 @@
         android:theme="@style/Theme.KingOfService">
         <activity android:name=".TelaPerfilPrestador"></activity>
         <activity android:name=".TelaListagem" />
-        <activity android:name=".TelaListagemDeServicos" />
         <activity android:name=".TelaFeed" />
         <activity
             android:name=".TelaCadastroPrestador"

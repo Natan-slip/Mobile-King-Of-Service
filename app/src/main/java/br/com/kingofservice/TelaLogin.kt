@@ -1,4 +1,4 @@
-package br.com.kingofservice.ui
+package br.com.kingofservice
 
 import android.content.Context
 import android.content.Intent

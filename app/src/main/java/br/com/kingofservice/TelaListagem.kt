@@ -1,4 +1,4 @@
-package br.com.kingofservice.ui
+package br.com.kingofservice
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -8,18 +8,21 @@ import android.view.MenuItem
 import android.widget.Toast
 import br.com.kingofservice.R
 
-class TelaPerfilPrestador : AppCompatActivity() {
+class TelaListagem : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_tela_perfil_prestador)
+        setContentView(R.layout.activity_tela_listagem)
 
         supportActionBar!!.title = "King Of Services"
         supportActionBar!!.setBackgroundDrawable(getDrawable(R.drawable.toolbar))
+
+
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.menu_opcoes,menu);
-        return true;
+    menuInflater.inflate(R.menu.menu_opcoes,menu);
+    return true;
     }
 
     private fun TelaCategorias() {
@@ -64,4 +67,5 @@ class TelaPerfilPrestador : AppCompatActivity() {
 
         return super.onOptionsItemSelected(item)
     }
+
 }

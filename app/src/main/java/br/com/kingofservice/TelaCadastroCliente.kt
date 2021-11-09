@@ -1,4 +1,4 @@
-package br.com.kingofservice.ui
+package br.com.kingofservice
 
 import android.app.DatePickerDialog
 import android.content.Intent
