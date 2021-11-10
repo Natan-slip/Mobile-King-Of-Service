@@ -4,6 +4,7 @@ import android.app.DatePickerDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.ContactsContract
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
@@ -25,6 +26,9 @@ class TelaCadastroCliente : AppCompatActivity() {
     lateinit var etCidadeCliente: EditText
     lateinit var etBairroCliente: EditText
     lateinit var etRuaCliente: EditText
+    lateinit var etNome: EditText
+    lateinit var etSenha: EditText
+    lateinit var etEmail: EditText
 
     lateinit var etDataNascimentoCliente: EditText
 
@@ -43,6 +47,9 @@ class TelaCadastroCliente : AppCompatActivity() {
         etCidadeCliente = findViewById(R.id.et_cidadeCadastroCliente)
         etBairroCliente = findViewById(R.id.et_bairroCadastroCliente)
         etDataNascimentoCliente = findViewById(R.id.et_dataNascimentoCadastroCliente)
+        etNome = findViewById(R.id.et_nomeCadastroCliente)
+        etSenha = findViewById(R.id.et_senhaCadastroCliente)
+        etEmail= findViewById(R.id.et_emailCadastroCliente)
 
         val btnCliente = findViewById<Button>(R.id.btn_Cliente)
 
@@ -99,7 +106,34 @@ class TelaCadastroCliente : AppCompatActivity() {
                 )
                 dpd.show()
             }
+
+        btnCliente.setOnClickListener {
+            val cliente = Cliente(
+                0,
+                etNome.text.toString(),
+                etEmail.text.toString(),
+                etSenha.text.toString()
+            )
+
+            //Obter uma instância da conexão com o Backend
+            val remote = RetrofitFactory().retrofitService()
+
+            //Criar uma chamada para o endpoint /cep/json
+            val call: Call<Cliente> = remote.gravarCliente(cliente)
+
+            //Executar a chamada para a api
+            call.enqueue(object : Callback<Cliente> {
+                override fun onResponse(call: Call<Cliente>, response: Response<Cliente>) {
+                    Toast.makeText(applicationContext, "deu certo!!", Toast.LENGTH_SHORT).show()
+
+                }
+
+                override fun onFailure(call: Call<Cliente>, t: Throwable) {
+                    Toast.makeText(applicationContext, t.message, Toast.LENGTH_SHORT).show()
+                }
+            })
         }
+    }
 
 // Parte de Menu
 

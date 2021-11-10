@@ -4,6 +4,8 @@ package br.com.kingofservice
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.Call
+import retrofit2.http.Body
+import retrofit2.http.POST
 
 interface RetrofitService {
 
@@ -18,5 +20,9 @@ interface RetrofitService {
         @Path("uf") uf: String,
         @Path("cidade") cidade: String,
         @Path("logradouro") logradouro: String) : Call<List<Cep>>
+
+
+    @POST("clientes")
+    fun gravarCliente(@Body cliente: Cliente) : Call<Cliente>
 
 }
