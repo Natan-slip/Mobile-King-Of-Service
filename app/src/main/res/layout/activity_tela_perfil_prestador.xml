@@ -13,6 +13,8 @@
         android:layout_height="match_parent"
         tools:context=".TelaPerfilPrestador">
 
+        <!-- PARTE do cabeçalho, Foto, Descrição e Nome-->
+
         <androidx.cardview.widget.CardView
             android:id="@+id/card_view_profile"
             android:layout_width="100dp"
@@ -35,14 +37,20 @@
 
         </androidx.cardview.widget.CardView>
 
-        <EditText
-            android:layout_width="252dp"
-            android:layout_height="95dp"
-            android:hint="Descrição:  long established fact that a reader will be simply dummy text"
+        <TextView
+            android:id="@+id/tv_descricaoPerfil"
+            android:layout_width="261dp"
+            android:layout_height="128dp"
+            android:background="@android:color/white"
+            android:text="Descrição: long established fact that a reader will be simply dummy text with are you so beuthefluy"
             android:textStyle="bold"
-            tools:layout_editor_absoluteX="155dp"
-            tools:layout_editor_absoluteY="28dp"
-            android:background="@android:color/white"/>
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/vw_endereco"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.666"
+            app:layout_constraintStart_toEndOf="@+id/card_view_profile"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.444" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -54,20 +62,15 @@
             tools:layout_editor_absoluteX="26dp"
             tools:layout_editor_absoluteY="164dp" />
 
+        <!-- PARTE de Endereços e Habilidades-->
+
         <View
+            android:id="@+id/vw_endereco"
             android:layout_width="match_parent"
             android:layout_height="2dp"
             android:background="#FF7A00"
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="191dp" />
-
-        <View
-            android:id="@+id/view"
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="#FF7A00"
-            tools:layout_editor_absoluteX="-16dp"
-            tools:layout_editor_absoluteY="512dp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -98,7 +101,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:drawableStart="@drawable/localizacao_24"
+            android:drawableStart="@drawable/name_24"
             android:drawablePadding="6dp"
             android:text="Fulano de Tal"
             android:textColor="@android:color/black"
@@ -154,6 +157,74 @@
             app:layout_constraintStart_toStartOf="@+id/card_view_prestador2"
             app:layout_constraintTop_toBottomOf="@+id/card_view_prestador2" />
 
+        <!-- PARTE do Portifólio -->
+
+        <View
+            android:id="@+id/vw_portifolio"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#FF7A00"
+            tools:layout_editor_absoluteX="-16dp"
+            tools:layout_editor_absoluteY="512dp" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Portifólio"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="536dp" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="95dp"
+            android:layout_height="84dp"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="83dp"
+            android:src="@drawable/icon_tecnico"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4"
+            app:layout_constraintVertical_bias="0.222" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="95dp"
+            android:layout_height="84dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="44dp"
+            android:src="@drawable/icon_limpeza"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageView2"
+            app:layout_constraintTop_toBottomOf="@+id/textView4"
+            app:layout_constraintVertical_bias="0.222" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="95dp"
+            android:layout_height="84dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/icon_manuntecao"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4"
+            app:layout_constraintVertical_bias="0.222" />
+
+        <!-- Avaliação e Comentários -->
+
+        <View
+            android:id="@+id/vw_avaliacao"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#FF7A00"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="713dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
