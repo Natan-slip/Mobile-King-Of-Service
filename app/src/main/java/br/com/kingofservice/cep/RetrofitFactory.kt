@@ -1,4 +1,4 @@
-package br.com.kingofservice
+package br.com.kingofservice.cep
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

@@ -1,4 +1,4 @@
-package br.com.kingofservice
+package br.com.kingofservice.cep
 
 import com.google.gson.annotations.SerializedName
 

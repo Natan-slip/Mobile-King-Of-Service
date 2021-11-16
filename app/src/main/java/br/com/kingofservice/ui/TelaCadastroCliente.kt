@@ -12,6 +12,8 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import br.com.kingofservice.*
+import br.com.kingofservice.cep.Cep
+import br.com.kingofservice.cep.RetrofitFactory
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

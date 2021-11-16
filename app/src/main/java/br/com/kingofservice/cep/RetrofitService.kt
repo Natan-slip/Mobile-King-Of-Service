@@ -1,6 +1,7 @@
-package br.com.kingofservice
+package br.com.kingofservice.cep
 
 
+import br.com.kingofservice.Cliente
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.Call
