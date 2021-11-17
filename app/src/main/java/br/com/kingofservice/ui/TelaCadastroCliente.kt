@@ -110,7 +110,7 @@ class TelaCadastroCliente : AppCompatActivity() {
             }
 
         btnCliente.setOnClickListener {
-            val cliente = Cliente(
+            val cadastro = Cadastro(
                 0,
                 etNome.text.toString(),
                 etEmail.text.toString(),
@@ -121,7 +121,7 @@ class TelaCadastroCliente : AppCompatActivity() {
             val remote = RetrofitFactory().retrofitService()
 
             //Criar uma chamada para o endpoint /cep/json
-            val call: Call<Cliente> = remote.gravarCliente(cliente)
+            val call: Call<Cliente> = remote.gravarCadastro(cadastro)
 
             //Executar a chamada para a api
             call.enqueue(object : Callback<Cliente> {

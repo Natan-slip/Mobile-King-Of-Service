@@ -9,7 +9,7 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import br.com.kingofservice.Cliente
-import com.example.towersadmin.api.ServiceCliente
+import com.example.towersadmin.api.FactoryCliente
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -46,7 +46,7 @@ class TelaLogin : AppCompatActivity() {
             )
 
             //Obter uma instância da conexão com o Backend
-            val remote = ServiceCliente().retrofitService()
+            val remote = FactoryCliente().serviceCliente()
 
             //Criar uma chamada para o endpoint /cep/json
             val call: Call<Cliente> = remote.gravarCliente(cliente)
@@ -64,10 +64,10 @@ class TelaLogin : AppCompatActivity() {
             })
         }
 
-        btnFazerLogin.setOnClickListener {
-            val intent = Intent(this, TelaListagem::class.java)
-            startActivity(intent)
-        }
+//        btnFazerLogin.setOnClickListener {
+//            val intent = Intent(this, TelaListagem::class.java)
+//            startActivity(intent)
+//        }
 
 
         tvCrieSuaConta.setOnClickListener {

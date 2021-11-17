@@ -1,4 +1,4 @@
-package com.example.towersadmin.api
+package br.com.kingofservice.cadastro
 
 import br.com.kingofservice.URLs
 import br.com.kingofservice.URLs.CADASTRO_URL
@@ -6,16 +6,16 @@ import br.com.kingofservice.cliente.ServiceCliente
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-class FactoryCliente {
+class FactoryCadastro {
 
-    val Cliente_URL = "kingofservices/login"
+    val Cadastro_URL = "kingofservices/cadastro"
 
     val retrofitFactory = Retrofit.Builder()
-        .baseUrl(Cliente_URL)
+        .baseUrl(Cadastro_URL)
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 
-    fun serviceCliente() : ServiceCliente {
-        return  retrofitFactory.create(ServiceCliente::class.java)
+    fun serviceCadastro() : ServiceCadastro {
+        return  retrofitFactory.create(ServiceCadastro::class.java)
     }
 }
