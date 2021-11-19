@@ -12,6 +12,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import br.com.kingofservice.*
+import br.com.kingofservice.cadastro.FactoryCadastro
 import br.com.kingofservice.cep.Cep
 import br.com.kingofservice.cep.RetrofitFactory
 import retrofit2.Call
@@ -114,23 +115,24 @@ class TelaCadastroCliente : AppCompatActivity() {
                 0,
                 etNome.text.toString(),
                 etEmail.text.toString(),
-                etSenha.text.toString()
+                etSenha.text.toString(),
+                etDataNascimentoCliente.text.toString()
             )
 
             //Obter uma instância da conexão com o Backend
-            val remote = RetrofitFactory().retrofitService()
+            val remote = FactoryCadastro().serviceCadastro()
 
             //Criar uma chamada para o endpoint /cep/json
-            val call: Call<Cliente> = remote.gravarCadastro(cadastro)
+            val call: Call<Cadastro> = remote.gravarCadastro(cadastro)
 
             //Executar a chamada para a api
-            call.enqueue(object : Callback<Cliente> {
-                override fun onResponse(call: Call<Cliente>, response: Response<Cliente>) {
+            call.enqueue(object : Callback<Cadastro> {
+                override fun onResponse(call: Call<Cadastro>, response: Response<Cadastro>) {
                     Toast.makeText(applicationContext, "deu certo!!", Toast.LENGTH_SHORT).show()
 
                 }
 
-                override fun onFailure(call: Call<Cliente>, t: Throwable) {
+                override fun onFailure(call: Call<Cadastro>, t: Throwable) {
                     Toast.makeText(applicationContext, t.message, Toast.LENGTH_SHORT).show()
                 }
             })

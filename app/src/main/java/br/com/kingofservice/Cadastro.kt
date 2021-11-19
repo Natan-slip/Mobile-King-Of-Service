@@ -7,5 +7,5 @@ data class Cadastro(
     var nome: String,
     var email: String,
     var senha: String,
-    var dataNascimento : LocalDate
+    var dataNascimento : String
 )

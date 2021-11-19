@@ -1,7 +1,5 @@
 package com.example.towersadmin.api
 
-import br.com.kingofservice.URLs
-import br.com.kingofservice.URLs.CADASTRO_URL
 import br.com.kingofservice.cliente.ServiceCliente
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

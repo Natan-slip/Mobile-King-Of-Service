@@ -1,6 +1,7 @@
 package br.com.kingofservice.cep
 
 
+import br.com.kingofservice.Cadastro
 import br.com.kingofservice.Cliente
 import retrofit2.http.GET
 import retrofit2.http.Path
@@ -21,9 +22,5 @@ interface RetrofitService {
         @Path("uf") uf: String,
         @Path("cidade") cidade: String,
         @Path("logradouro") logradouro: String) : Call<List<Cep>>
-
-
-    @POST("clientes")
-    fun gravarCliente(@Body cliente: Cliente) : Call<Cliente>
 
 }

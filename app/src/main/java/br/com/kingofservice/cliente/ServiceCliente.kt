@@ -1,15 +1,13 @@
 package br.com.kingofservice.cliente
 
-import br.com.kingofservice.Cadastro
 import br.com.kingofservice.Cliente
-import br.com.kingofservice.URLs
 import retrofit2.Call
 import retrofit2.http.Body
-import retrofit2.http.POST
+import retrofit2.http.GET
 
 interface ServiceCliente {
 
-    @POST("clientes")
+    @GET("clientes")
     fun gravarCliente(@Body cliente: Cliente) : Call<Cliente>
 
 }
