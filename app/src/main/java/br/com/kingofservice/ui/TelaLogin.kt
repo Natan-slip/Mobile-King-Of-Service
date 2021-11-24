@@ -64,10 +64,10 @@ class TelaLogin : AppCompatActivity() {
             })
         }
 
-//        btnFazerLogin.setOnClickListener {
-//            val intent = Intent(this, TelaListagem::class.java)
-//            startActivity(intent)
-//        }
+        btnFazerLogin.setOnClickListener {
+            val intent = Intent(this, TelaListagem::class.java)
+            startActivity(intent)
+        }
 
 
         tvCrieSuaConta.setOnClickListener {
